@@ -1,0 +1,60 @@
+/* ==========================================
+   BASE STYLES — Element Selectors
+   Target HTML tag names directly;
+   no class or id needed.
+   ========================================== */
+
+/* Element selector: applies to every <body> tag on the page */
+body {
+    background-color: black;
+    color: beige;
+    line-height: 2;
+    /* unitless line-height is relative to the element's font-size */
+}
+
+/* Grouped selector: comma separates targets — all three headings share these rules */
+h1,
+h2,
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    /* Font stack: browser tries Arial first, falls back left-to-right if unavailable */
+    color: aquamarine;
+    font-weight: Bold;
+}
+
+
+/* ==========================================
+   CLASS SELECTORS
+   Start with a dot (.) and can be applied
+   to multiple elements on the page.
+   ========================================== */
+
+/* Targets any element with class="img-center" */
+.img-center {
+    width: 40%;
+    height: auto;
+    /* auto keeps the image's natural proportions when width is set */
+    display: block;
+    /* block allows margin: auto to center the image horizontally */
+    margin: 20px auto;
+}
+
+/* Targets any element with class="highlighter" — applied to a <span> mid-paragraph */
+.highlighter {
+    background-color: greenyellow;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+}
+
+
+/* ==========================================
+   ID SELECTOR
+   Starts with a hash (#) and must be
+   unique — only one element per page.
+   ========================================== */
+
+/* Targets the single element with id="red" */
+#red {
+    color: red;
+}

@@ -1,0 +1,70 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Week 5 Sample: Flexbox</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>Meet the Team</h1>
+
+    <!-- 📦 FLEX CONTAINER: This <div> is the PARENT in our flexbox layout -->
+    <!-- ℹ️ The CSS rule "display: flex" on this element activates flexbox -->
+    <!-- ℹ️ All direct children (.team-card divs) automatically become flex items -->
+    <!-- 💡 Think of the container as the "boss" — it tells the items how to arrange themselves -->
+    <div class="team-container">
+      <!-- CARD 1 -->
+      <!-- 🃏 FLEX ITEM: This card is a direct child of .team-container, so it is a flex item -->
+      <!-- ℹ️ Flex items are sized and positioned by the parent container's flex rules -->
+      <!-- 💡 This card is ALSO its own flex container (nested flexbox!) — see the CSS for details -->
+      <div class="team-card">
+        <img
+          src="https://placehold.co/100x100/png?text=CEO"
+          alt="CEO"
+          class="avatar"
+        />
+        <h2>Sarah Jenkins</h2>
+        <div class="role">Chief Executive</div>
+        <p>
+          Sarah founded the company in her garage in 2015. She loves coffee and
+          code.
+        </p>
+        <!-- 💡 This button is pinned to the bottom by "margin-top: auto" in the CSS -->
+        <!-- ⚠️ The auto-margin trick ONLY works because .team-card is a flex column container -->
+        <a href="#" class="btn">View Profile</a>
+      </div>
+
+      <!-- CARD 2 -->
+      <!-- 🃏 FLEX ITEM: Another direct child of .team-container — the same flex rules apply -->
+      <div class="team-card">
+        <img
+          src="https://placehold.co/100x100/png?text=CTO"
+          alt="CTO"
+          class="avatar"
+        />
+        <h2>Mike Chen</h2>
+        <div class="role">Tech Lead</div>
+        <p>Mike ensures our servers never crash. He is a wizard with Python.</p>
+        <a href="#" class="btn">View Profile</a>
+      </div>
+
+      <!-- CARD 3 -->
+      <!-- 🃏 FLEX ITEM: The third direct child — flexbox automatically places it beside Card 2 -->
+      <div class="team-card">
+        <img
+          src="https://placehold.co/100x100/png?text=DES"
+          alt="Designer"
+          class="avatar"
+        />
+        <h2>Jessica Alba</h2>
+        <div class="role">Lead Designer</div>
+        <p>
+          Jessica makes everything look beautiful. She is obsessed with
+          Typography.
+        </p>
+        <a href="#" class="btn">View Profile</a>
+      </div>
+    </div>
+  </body>
+</html>

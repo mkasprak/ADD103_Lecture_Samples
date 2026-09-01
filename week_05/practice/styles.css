@@ -1,0 +1,27 @@
+/* I'm using on page styles just to see and change them while I work */
+body {
+  background: rgb(240, 227, 153);
+  color: rgb(87, 8, 87);
+}
+
+h1,
+p {
+  text-align: center;
+  color: rgb(87, 9, 87);
+}
+.container {
+  background-color: rgb(87, 9, 87);
+  display: flex;
+  min-height: 150px;
+  width: 60%;
+  margin: 10px auto;
+}
+.flex_div {
+  background: rgb(234, 231, 212);
+  margin: 20px 2.5%;
+  padding: 10px;
+  font-size: 35px;
+  color: rgb(87, 9, 87);
+  height: 100px;
+  width: 15%;
+}

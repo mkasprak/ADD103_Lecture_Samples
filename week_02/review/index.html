@@ -1,0 +1,75 @@
+<!-- ===== DOCUMENT TYPE DECLARATION ===== -->
+<!-- <!doctype html> tells the browser this is an HTML5 document; must be first line -->
+<!doctype html>
+
+<!-- ===== ROOT ELEMENT ===== -->
+<!-- <html lang="en"> declares this page is in English for screen readers and search engines -->
+<html lang="en">
+
+<!-- ===== METADATA & PAGE SETUP ===== -->
+<!-- <head> contains browser configuration; nothing here is visible on the page -->
+<head>
+  <!-- UTF-8 character encoding supports all world languages and emoji -->
+  <meta charset="UTF-8" />
+  <!-- viewport meta tag makes the page responsive to mobile devices -->
+  <!-- width=device-width: page width matches the device screen width -->
+  <!-- initial-scale=1.0: no zoom; 1x means 100% zoom level on first load -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <title> displays in the browser tab and in search engine results -->
+  <title>Document</title>
+</head>
+
+<!-- ===== INLINE STYLES ===== -->
+<!-- style="" attribute applies CSS directly to a single element (inline styling) -->
+<!-- Best practice: use external .css files instead; this is just for quick tests/demos -->
+<!-- Multiple CSS properties in style="" are separated by semicolons: property: value; property: value -->
+
+<body style="background-color: rgb(12, 9, 9)">
+  <!-- rgb(12, 9, 9) = very dark gray/near-black (R=12, G=9, B=9 all very low) -->
+  <!-- RGB format: rgb(red, green, blue) where each value is 0-255 -->
+  <!-- 0,0,0 = black; 255,255,255 = white; 255,0,0 = red -->
+  
+  <!-- ===== STYLED HEADING WITH COLOR & WEIGHT ===== -->
+  <h1 style="color: yellow; font-weight: bold">Yellowstone</h1>
+  <!-- color: yellow makes the text bright yellow (a named CSS color) -->
+  <!-- font-weight: bold makes the heading extra thick/heavy -->
+  <!-- Multiple properties in style="" are separated by semicolons -->
+  
+  <!-- ===== CENTERED IMAGE ===== -->
+  <p style="text-align: center">
+    <!-- text-align: center horizontally centers inline/inline-block content -->
+    <!-- This is an inline style on the <p>, so only content inside this paragraph is centered -->
+    <!-- <img> is an inline element, so it respects text-align: center from its parent -->
+    <img src="yellowstone.jpg" alt="Yellowstone" width="400" />
+    <!-- src = file path to the image (relative to this HTML file's location) -->
+    <!-- alt = alternative text shown if image fails to load, and read by screen readers -->
+    <!-- Descriptive alt text improves accessibility for visually impaired users -->
+    <!-- width="400" = display width in pixels; height auto-adjusts to maintain aspect ratio -->
+  </p>
+  
+  <!-- ===== STYLED PARAGRAPH TEXT ===== -->
+  <p style="color: rgb(234, 231, 231); font-size: 20px">
+    <!-- color: rgb(234, 231, 231) = very light gray (all three values close to 255) -->
+    <!-- font-size: 20px = fixed text size of 20 pixels -->
+    <!-- px = pixels; other units include em (relative) and rem (root-relative) -->
+    <!-- Note: fixed pixel sizes don't scale with user's browser zoom, so em/rem are preferred for accessibility -->
+    I have really loved watching this show this summer. To like a TV show, I
+    have to have a character (or more than one) to root for. In this show, I’m
+    rooting for a lot of them. We are introduced to a sort of unambitious,
+    unintelligent man who wants to belong somewhere and be liked at the
+    beginning of the show. His name is Jimmy, and when we first meet him, he
+    is being branded with a cattle brand by a big man dressed all in black (in
+    every scene, is he a Johnny Cash fan?) named Rip. Rip is one of the most
+    important characters in the show.
+  </p>
+  
+  <!-- ===== NAVIGATION LINK ===== -->
+  <!-- ../../ = relative path going up two folder levels -->
+  <!-- From week_02/review/index.html: -->
+  <!--   ../ = up to week_02/ -->
+  <!--   ../../ = up to root ADD103_Lecture_Samples/ -->
+  <!-- So ../../index.html points to the main root index.html file -->
+  <p><a href="../../index.html">Home</a></p>
+</body>
+
+</html>

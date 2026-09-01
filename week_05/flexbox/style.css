@@ -1,0 +1,54 @@
+﻿/* ===== FLEXBOX LAYOUT GUIDE ===== */
+/* Flex Container
+   ADD 103 Web Development Fundamentals
+   ===================================== */
+
+/* ===== UNIVERSAL SELECTOR RESET ===== */
+/* * targets every element on the page */
+* {
+  /* border-box: padding and borders are included in the element's width/height */
+  /* Without this, padding makes elements wider than the assigned width */
+  /* This is considered a CSS best practice and should be used on every project */
+  box-sizing: border-box;
+  /* Removes all default browser margins (gutters) around elements */
+  /* Gives us a clean slate to build from */
+  margin: 0;
+  /* Removes all default padding (interior spacing) */
+  /* Combined with margin: 0, this prevents unwanted spacing */
+  padding: 0;
+}
+
+/* ===== BODY STYLING ===== */
+body {
+  /* Sets the default font for the entire page */
+  /* sans-serif is a generic fallback; the browser will choose an appropriate sans-serif font */
+  font-family: sans-serif;
+  /* Adds 2rem (2× the root font size, typically 16px = 32px) of padding */
+  /* Rem units = relative to the root <html> element, making layouts more maintainable */
+  /* This creates a comfortable margin around all content */
+  padding: 2rem;
+}
+
+/* ===== 📦 FLEXBOX QUICK REFERENCE ===== */
+/* ℹ️ Apply "display: flex" to a PARENT element to activate flexbox on its children */
+/* ℹ️ That parent becomes the FLEX CONTAINER; its direct children become FLEX ITEMS */
+/*                                                                        */
+/* 🔑 FLEX CONTAINER properties (go on the parent):                       */
+/*   display: flex           → Activates flexbox — this line is required! */
+/*   flex-direction: row     → Main axis goes left → right (default)      */
+/*   flex-direction: column  → Main axis goes top → bottom                */
+/*   justify-content         → ℹ️ Aligns items along the MAIN axis        */
+/*   align-items             → ℹ️ Aligns items along the CROSS axis       */
+/*   flex-wrap: wrap         → 💡 Items wrap to the next line (responsive!)*/
+/*   gap                     → 💡 Space between items only (not at edges) */
+/*                                                                        */
+/* ⚠️ MAIN AXIS vs CROSS AXIS:                                            */
+/*   flex-direction: row    → Main = left/right  │ Cross = up/down        */
+/*   flex-direction: column → Main = up/down     │ Cross = left/right     */
+/*                                                                        */
+/* 🔑 FLEX ITEM properties (go on the children):                          */
+/*   flex-grow              → How much an item grows to fill leftover space*/
+/*   flex-shrink            → How much an item shrinks when space is tight */
+/*   align-self             → Overrides align-items for just ONE item     */
+/*   margin: auto           → 💡 Absorbs free space to push items apart   */
+

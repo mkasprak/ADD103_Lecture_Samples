@@ -1,0 +1,130 @@
+/* 
+  ADD 103: INTRODUCTION TO WEB DESIGN
+  ===========================================
+  Reference Sample: Week 3A: Links & Images (CSS Class Selectors)
+  This stylesheet demonstrates Tag/Element vs. Class selectors.
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333333;
+    line-height: 1.6;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #582C83;
+    margin-bottom: 10px;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.subtitle {
+    color: #666666;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 1.1rem;
+    max-width: 600px;
+}
+
+/* Styling tags globally (Element Selectors) */
+h2 {
+    color: #333333;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+p {
+    color: #555555;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+a {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+/* Card Container layout */
+.container {
+    display: flex;
+    gap: 30px;
+    max-width: 1100px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 30px;
+    flex: 1;
+    min-width: 320px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* Class Selectors for the specific box */
+.featured-card {
+    border-top: 6px solid #D1A153; /* Gold accent border */
+    background-color: #fdfbf7;
+}
+
+/* Class selectors overriding the global p style */
+.alert-text {
+    color: #d9534f; /* Red alert text */
+    font-weight: bold;
+    font-size: 0.95rem;
+    background-color: #fdf7f7;
+    padding: 8px 12px;
+    border-left: 4px solid #d9534f;
+    border-radius: 2px;
+    margin-top: 15px;
+}
+
+/* Class selector to turn a standard link into a button */
+.btn-link {
+    display: inline-block;
+    background-color: #582C83; /* Brand Purple */
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    margin-top: 10px;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-link:hover {
+    background-color: #442266;
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.back-link {
+    margin-top: 40px;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #582C83;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.2s;
+}
+
+.back-link:hover {
+    background-color: #442266;
+}

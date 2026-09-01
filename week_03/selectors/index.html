@@ -1,0 +1,55 @@
+<!--
+  ADD 103: INTRODUCTION TO WEB DESIGN
+  ===========================================
+  Reference Lesson: Week 3A: Links & Images (Page Titles, Favicons, Links & Relative Pathing)
+  Use this file as a code reference guide for your weekly projects.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Demonstration</title>
+    <!-- Links to the external style.css in the same directory -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>CSS Selectors: Element vs. Class</h1>
+    <p class="subtitle">This page demonstrates how global element (tag) selectors style everything of that type, and how class selectors target specific elements.</p>
+
+    <div class="container">
+        <!-- CARD 1: ELEMENT SELECTORS -->
+        <div class="card">
+            <h2>1. Global Element Selectors</h2>
+            <p>This box uses global CSS selectors targeting tags (like <code>h2</code>, <code>p</code>, and <code>a</code>) directly. Every single matching tag on the website gets these styles:</p>
+            
+            <ul style="margin-left: 20px; margin-bottom: 20px; color: #555;">
+                <li><code>h2</code> is styled dark gray</li>
+                <li><code>p</code> is styled medium gray</li>
+                <li><code>a</code> is styled blue and underlined</li>
+            </ul>
+
+            <p>For example, this standard link: <a href="https://www.w3schools.com" target="_blank">W3Schools Home</a> receives the default underlined blue color styling because it uses the plain <code>&lt;a&gt;</code> tag.</p>
+        </div>
+
+        <!-- CARD 2: CLASS SELECTORS -->
+        <div class="card featured-card">
+            <h2>2. Specific Class Selectors</h2>
+            <p>This box uses classes (like <code>.featured-card</code>, <code>.alert-text</code>, and <code>.btn-link</code>) to apply specific styles to individual elements, overriding or extending the default tag styles:</p>
+            
+            <p class="alert-text">
+                ⚠️ Notice: This paragraph has class="alert-text" applied. It overrides the default gray text color to red, adds padding, and draws a border!
+            </p>
+
+            <p>We styled this link with <code>class="btn-link"</code> to make it look like a button rather than a standard underlined link:
+                <br>
+                <a href="https://www.w3schools.com/css/css_selectors.asp" target="_blank" class="btn-link">W3Schools Selectors Guide</a>
+            </p>
+        </div>
+    </div>
+
+    <a href="../../index.html" class="back-link">← Back to Samples</a>
+
+</body>
+</html>

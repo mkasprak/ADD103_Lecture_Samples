@@ -1,0 +1,41 @@
+﻿<!-- ===== DOCUMENT TYPE DECLARATION ===== -->
+<!-- <!DOCTYPE html> tells the browser this is an HTML5 document; must be first line -->
+<!doctype html>
+
+<!-- ===== ROOT ELEMENT ===== -->
+<!-- <html lang="en"> wraps all content; lang="en" declares English for accessibility -->
+<html lang="en">
+  <!-- ===== METADATA & PAGE CONFIGURATION ===== -->
+  <!-- <head> contains setup info; nothing here displays on the page -->
+  <head>
+    <!-- UTF-8 character encoding supports all world languages and symbols -->
+    <meta charset="UTF-8" />
+    <!-- Viewport meta tag: tells the browser to scale the page for mobile devices -->
+    <!-- width=device-width: page width = device screen width -->
+    <!-- initial-scale=1.0: starts at 100% zoom (1x); no automatic zooming -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <title> appears in browser tab and search results -->
+    <title>Flex Container</title>
+    <!-- <link> connects this HTML file to an external CSS stylesheet -->
+    <!-- rel="stylesheet" declares the relationship type -->
+    <!-- href="style.css" points to the CSS file (relative path, same folder) -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <!-- ===== PAGE CONTENT ===== -->
+  <body>
+    <!-- ===== 📦 FLEXBOX: HOW IT WORKS IN HTML ===== -->
+    <!-- ℹ️ Flexbox is a CSS layout tool — HTML just needs to provide a parent-child structure -->
+    <!-- ℹ️ FLEX CONTAINER = the parent element that gets "display: flex" in the CSS -->
+    <!-- ℹ️ FLEX ITEMS = the direct children of that container; they get arranged automatically -->
+    <!-- 💡 No special HTML tags or attributes are needed — flexbox is controlled entirely in CSS! -->
+    <!-- ⚠️ Only DIRECT children become flex items — deeper nested elements are NOT affected -->
+    <!-- <h1> = primary page heading; use only ONE per page -->
+    <h1>Flex Container</h1>
+
+    <!-- <p> = paragraph; a block-level element that starts on a new line -->
+    <!-- &mdash; is an HTML entity representing an em-dash (— character) -->
+    <!-- HTML entities are used when you want to display characters that have special meaning in HTML -->
+    <p>Week 05 &mdash; ADD 103 Web Development Fundamentals</p>
+  </body>
+</html>

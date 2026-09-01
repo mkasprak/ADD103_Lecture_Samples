@@ -1,0 +1,40 @@
+/* ==========================================
+   BASE STYLES
+   ========================================== */
+
+body {
+    background-color: antiquewhite;
+    line-height: 2;
+    /* unitless value is relative to the element's font-size */
+}
+
+
+/* ==========================================
+   LIST STYLES
+   ol and ul each have a default marker style
+   that CSS can override with list-style-type.
+   ========================================== */
+
+/* Targets all <ol> elements (top-level and nested) */
+ol {
+    font-weight: bold;
+}
+
+/* Descendant selector: targets <ol> only when nested INSIDE another <ol> */
+/* This changes only the sub-list markers without affecting the outer list */
+ol ol {
+    list-style-type: lower-alpha;
+    /* changes sub-list markers to a, b, c... */
+}
+
+/* Targets all <ul> elements */
+ul {
+    list-style-type: circle;
+    /* hollow circle instead of the default filled bullet */
+}
+
+/* Descendant selector: targets <ul> only when nested INSIDE another <ul> */
+ul ul {
+    list-style-type: square;
+    /* filled square for the second-level bullet */
+}

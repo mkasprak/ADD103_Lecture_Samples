@@ -1,0 +1,64 @@
+/* ==========================================
+   BASE STYLES
+   ========================================== */
+
+body {
+    background-color: ivory;
+}
+
+
+/* ==========================================
+   TABLE STRUCTURE SELECTORS
+   Tables nest elements in order:
+   <table> → <tr> → <th> (header) or <td> (data)
+   ========================================== */
+
+/* The outer <table> container */
+table {
+    width: 90%;
+    margin: 10px auto;
+    /* auto left/right margins center the table horizontally */
+    border: 3px solid rgb(26, 78, 26);
+    border-collapse: collapse;
+    /* merges cell borders into single lines instead of doubling up */
+
+}
+
+/* <th> = header cell; targets both the top row and left-column time labels */
+th {
+    font-weight: bold;
+    text-align: center;
+    color: rgb(26, 78, 26);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    background-color: rgb(183, 239, 183);
+    width: 12.5%;
+    /* 100% ÷ 8 columns = 12.5% each for an even grid */
+    line-height: 1.5;
+    border: 1px solid black;
+
+
+}
+
+/* <td> = data cell; every non-header cell in the table body */
+td {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    border: 1px solid rgb(26, 78, 26);
+    min-width: 12.5%;
+    min-height: 20px;
+}
+
+/* Grouped selector: shares centering across all three targets */
+th,
+h1,
+h2 {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Class selector: applied to colspan/rowspan cells for extra emphasis */
+.center-me {
+    text-align: center;
+    font-weight: bold;
+}

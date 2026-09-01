@@ -1,0 +1,150 @@
+﻿/* ===== GLOBAL BODY STYLING ===== */
+body {
+  /* Sets the main typeface to Verdana with sans-serif as fallback */
+  font-family: "Verdana", sans-serif;
+  /* Light cyan background color for the entire page */
+  background-color: #e0f7fa;
+  /* Removes default browser margins */
+  margin: 0;
+  /* Adds 40px spacing inside the body element */
+  padding: 40px;
+}
+
+/* ===== PAGE HEADING STYLING ===== */
+h1 {
+  /* Centers the heading text horizontally */
+  text-align: center;
+  /* Dark teal color for the heading */
+  color: #006064;
+}
+
+/* ===== 📦 FLEX CONTAINER (Parent) ===== */
+/* ℹ️ The PARENT element in the flexbox relationship */
+/* ℹ️ Only direct children become flex items — grandchildren are NOT affected */
+/* This is the main container that holds all the team cards */
+.team-container {
+  /* ℹ️ "display: flex" is the on/off switch for flexbox */
+  /* ℹ️ Without this one line, children would stack vertically like normal block elements */
+  /* Enables flexbox layout - makes children align in a row by default */
+  display: flex;
+  /* ℹ️ justify-content aligns items along the MAIN AXIS (horizontal by default) */
+  /* Centers items horizontally along the main axis (left-right) */
+  justify-content: center;
+  /* ℹ️ align-items aligns items along the CROSS AXIS (vertical by default) */
+  /* ⚠️ align-items only has a visible effect when flex items have different heights */
+  /* Centers items vertically along the cross axis (up-down) */
+  align-items: center;
+  /* 💡 gap is the modern way to add space between flex items */
+  /* 💡 Unlike margin, gap does NOT add space before the first or after the last item */
+  /* Creates 30px space between each flex item */
+  gap: 30px;
+  /* 💡 flex-wrap: wrap is essential for responsive design */
+  /* 💡 Without it, items squish onto one line — with it, they flow to the next line */
+  /* Allows items to wrap to the next line if they don't fit */
+  flex-wrap: wrap;
+  /* Limits the container's maximum width to prevent too-wide layouts */
+  max-width: 1000px;
+  /* Centers the container itself on the page */
+  margin: 0 auto;
+}
+
+/* ===== FLEX ITEM CARDS (Children) ===== */
+/* Each team member is displayed in its own card */
+.team-card {
+  /* White background makes each card stand out */
+  background: white;
+  /* Rounded corners for a modern appearance */
+  border-radius: 10px;
+  /* Interior spacing: 20px on all sides */
+  padding: 20px;
+  /* Fixed card width of 250 pixels */
+  width: 250px;
+  /* Centers text content horizontally within the card */
+  text-align: center;
+  /* Subtle shadow gives the card depth and visual separation */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  /* ℹ️ NESTED FLEXBOX: This card is both a flex ITEM and a flex CONTAINER */
+  /* ℹ️ It is a flex item because it lives inside .team-container */
+  /* 💡 It is also a flex container because it has its own display: flex applied */
+  /* The card ITSELF is also a flex container (nested flexbox) */
+  /* This allows vertical arrangement of its contents */
+  display: flex;
+  /* ℹ️ flex-direction: column flips the main axis from horizontal to vertical */
+  /* ℹ️ Content now flows TOP to BOTTOM instead of LEFT to RIGHT */
+  /* Stacks children vertically (top to bottom) */
+  flex-direction: column;
+  /* Centers children horizontally within the card */
+  align-items: center;
+}
+
+/* ===== AVATAR IMAGE STYLING ===== */
+.avatar {
+  /* Fixed width of 100 pixels */
+  width: 100px;
+  /* Fixed height of 100 pixels - creates a perfect circle with border-radius */
+  height: 100px;
+  /* Rounds corners to 50% to create a circular shape */
+  border-radius: 50%;
+  /* Ensures the image fills the circular container without distortion */
+  object-fit: cover;
+  /* Adds space below the avatar image */
+  margin-bottom: 15px;
+  /* Bright cyan border around the image */
+  border: 4px solid #00bcd4;
+}
+
+/* ===== TEAM MEMBER NAME STYLING ===== */
+h2 {
+  /* Removes the default top and bottom margins */
+  margin: 0;
+  /* Makes the name slightly larger than normal text (1.2x current size) */
+  font-size: 1.2rem;
+  /* Dark gray color for good readability */
+  color: #333;
+}
+
+/* ===== JOB TITLE/ROLE STYLING ===== */
+.role {
+  /* Cyan color to match the design theme */
+  color: #00bcd4;
+  /* Makes the role text heavier/darker */
+  font-weight: bold;
+  /* Adds space below the role */
+  margin-bottom: 15px;
+}
+
+/* ===== DESCRIPTION TEXT STYLING ===== */
+p {
+  /* Makes text slightly smaller (90% of normal size) */
+  font-size: 0.9rem;
+  /* Medium gray color for descriptions */
+  color: #666;
+  /* Increases space between lines for better readability */
+  /* 1.5 times the font size is a good standard */
+  line-height: 1.5;
+}
+
+/* ===== BUTTON STYLING ===== */
+.btn {
+  /* 💡 AUTO MARGIN TRICK: In flexbox, "auto" margins absorb ALL available free space */
+  /* 💡 margin-top: auto shoves this button down to the very bottom of the card */
+  /* ⚠️ This only works because .team-card is a flex container with flex-direction: column */
+  /* ⚠️ If the parent were NOT a flex container, margin-top: auto would have no special effect */
+  /* IMPORTANT FLEX TRICK: margin-top: auto pushes the button to the bottom */
+  /* This works because the card is a flex container with flex-direction: column */
+  /* The button will occupy remaining space and stay at the bottom */
+  margin-top: auto;
+  /* Dark teal background */
+  background-color: #006064;
+  /* White text for contrast */
+  color: white;
+  /* Removes the default underline from links */
+  text-decoration: none;
+  /* Adds internal spacing around the button text */
+  padding: 8px 15px;
+  /* Creates pill-shaped button with highly rounded corners */
+  border-radius: 20px;
+  /* Makes button text slightly smaller */
+  font-size: 0.8rem;
+}

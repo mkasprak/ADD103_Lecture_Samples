@@ -1,0 +1,6 @@
+blockquote {
+    padding: 20px 40px;
+    background-color: rgba(94, 138, 182, 0.8);
+    border: 5px solid goldenrod;
+    margin: 20px auto;
+}

@@ -1,0 +1,82 @@
+<!-- ===== DOCUMENT TYPE DECLARATION ===== -->
+<!-- <!doctype html> tells the browser this is an HTML5 document; must be first line -->
+<!doctype html>
+
+<!-- ===== ROOT ELEMENT WITH LANGUAGE ===== -->
+<!-- <html> wraps all other content; lang="en" declares English for accessibility -->
+<html lang="en">
+
+<!-- ===== METADATA & PAGE INFO ===== -->
+<!-- <head> contains info the browser needs but isn't visible on the page -->
+<head>
+  <!-- UTF-8 character encoding supports all languages and emoji worldwide -->
+  <meta charset="UTF-8" />
+  <!-- viewport ensures the page scales correctly on mobile devices (zoom = fit to screen) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <title> appears in the browser tab and search engine results -->
+  <title>Demo</title>
+</head>
+
+<!-- ===== INLINE STYLES ===== -->
+<!-- The style="" attribute applies CSS directly to an element (inline styling) -->
+<!-- This approach mixes content with presentation and is generally avoided in professional code -->
+<!-- Better practice: use external CSS files (links in <head>) or <style> tags -->
+
+<body style="background-color: rgb(255, 255, 179)">
+  <!-- rgb(255, 255, 179) is light yellow: red=255, green=255, blue=179 -->
+  <!-- RGB values range from 0-255; 255,255,255 is white; 0,0,0 is black -->
+
+  <!-- ===== HEADING HIERARCHY ===== -->
+  <!-- Use h1–h6 to structure page content logically -->
+  <!-- h1 = main page heading (use only ONE per page for SEO and accessibility) -->
+  <!-- h2–h6 = progressively smaller sub-headings; never skip levels (don't jump from h1 to h3) -->
+  <h1 style="color: rebeccapurple">Heading level 1</h1>
+  <!-- rebeccapurple is one of ~140 named CSS colors browsers recognize -->
+  <!-- Named colors are easier to read than hex/rgb, but hex offers more precision -->
+  
+  <h2>Heading level 2</h2>
+  <!-- h2 is typically used for major section headings under the main h1 -->
+  
+  <h3>Heading level 3</h3>
+  <!-- h3 for sub-sections within an h2 -->
+  
+  <h4>Heading level 4</h4>
+  <!-- h4–h6 are less common; most pages only need h1–h3 -->
+  
+  <h5>Heading level 5</h5>
+  <h6>Heading level 6</h6>
+
+  <!-- ===== PARAGRAPH TEXT ===== -->
+  <!-- <p> = paragraph; a block-level element that always starts on a new line -->
+  <!-- Block elements stack vertically; inline elements (like <a>, <em>, <strong>) flow left-to-right -->
+  <p>This is a paragraph.</p>
+
+  <!-- ===== SEMANTIC INLINE ELEMENTS ===== -->
+  <!-- <a> = anchor/hyperlink; href attribute specifies the URL or file path to navigate to -->
+  <!-- <em> = emphasis; renders as italic and signals stress/emphasis to screen readers -->
+  <!-- href="https://..." = absolute URL (includes the full domain; works anywhere) -->
+  <!-- href="file.html" = relative URL (works from the current folder; relative to this file) -->
+  <a href="https://www.mchenry.edu/events/2026/08/fall-semester-08-17.html"><em>Fall</em> Academic Calendar</a>
+
+  <!-- ===== VOID/EMPTY ELEMENTS ===== -->
+  <!-- These elements have no closing tag and no content; they are self-contained -->
+  
+  <!-- <hr> = horizontal rule / thematic divider; used to break up content visually -->
+  <hr />
+
+  <!-- ===== IMAGES ===== -->
+  <!-- <img> = embeds an image; it's a void element (no closing tag needed) -->
+  <!-- src = the path to the image file (can be relative or absolute) -->
+  <!-- alt = alternative text shown if image fails to load or for screen readers -->
+  <!-- Descriptive alt text is essential for accessibility -->
+  <!-- width = display size in pixels (height auto-adjusts to maintain proportions) -->
+  <img src="puppy.jpg" alt="A cute puppy" width="400" />
+  
+  <!-- ===== NAVIGATION LINKS ===== -->
+  <!-- ../ = relative path notation that goes UP one folder level -->
+  <!-- For example, from week_02/teaching.html, ../index.html points to the root index.html -->
+  <!-- Use ../ to go up, and folder_name/ to go down or sideways in the hierarchy -->
+  <p><a href="../index.html">Home</a></p>
+</body>
+
+</html>
