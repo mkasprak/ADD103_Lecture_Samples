@@ -1,48 +1,64 @@
-<!DOCTYPE html>
+<!-- 🕸️ Emmet: In a blank .html file, type ! then Tab to generate this entire boilerplate -->
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Week 3A</title>
-    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
     <!-- favicon: the small icon shown in the browser tab next to the title -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <!-- Links our external CSS file; keeps styling separate from structure -->
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- All visible content lives inside <body> -->
     <h1>Demo Selectors, images, favicon</h1>
 
     <h2>Images</h2>
-    <p>You need to put in the img tag, the location of the image, and alternative text.</p>
+    <p>
+      You need to put in the img tag, the location of the image, and alternative
+      text.
+    </p>
     <!-- class="img-center" connects this element to the .img-center rule in styles.css -->
-    <img src="images/puppy.jpg" alt="Puppy" class="img-center">
+    <!-- 🕸️ Emmet: img.img-center + Tab → <img src="" alt="" class="img-center"> -->
+    <img src="images/puppy.jpg" alt="Puppy" class="img-center" />
 
     <!-- id="red" — an ID is unique; only ONE element on the page should use it -->
     <!-- In CSS, IDs are targeted with #red (hash symbol) -->
+    <!-- 🕸️ Emmet: div#red + Tab → <div id="red"></div> -->
     <div id="red">
-        <p>all the text in this div will be red.</p>
+      <p>all the text in this div will be red.</p>
     </div>
 
     <!-- class="pretty-center" — a class can be reused on multiple elements -->
     <!-- In CSS, classes are targeted with .pretty-center (dot symbol) -->
+    <!-- 🕸️ Emmet: div.pretty-center + Tab → <div class="pretty-center"></div> -->
     <div class="pretty-center">
-        <p>Here we properly center text.</p>
-        <p>Don't use text-align center</p>
-        <!-- <span> is an inline container — used here to apply .highlighter mid-paragraph -->
-        <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum ut autem necessitatibus veritatis,
-                distinctio, deleniti eaque culpa accusantium explicabo voluptates aut doloribus ad nam! Enim totam
-                maxime recusandae ab iste?</span><span class="highlighter">Aliquid eius aut similique, sed quia nihil,
-                natus magnam dolor numquam iusto saepe inventore accusantium ipsum, ipsa et atque. Asperiores laboriosam
-                non tempora illo? Facere ipsa unde impedit quidem optio!</span><span>A voluptate earum, unde laborum
-                impedit perspiciatis deserunt expedita cupiditate aliquam repudiandae minus odit mollitia error possimus
-                nemo aut? Rem atque rerum nulla reprehenderit perspiciatis? Distinctio corporis rerum reiciendis
-                temporibus.</span></p>
+      <p>Here we properly center text.</p>
+      <p>Don't use text-align center</p>
+      <!-- <span> is an inline container — used here to apply .highlighter mid-paragraph -->
+      <p>
+        <span
+          >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum ut
+          autem necessitatibus veritatis, distinctio, deleniti eaque culpa
+          accusantium explicabo voluptates aut doloribus ad nam! Enim totam
+          maxime recusandae ab iste?</span
+        ><span class="highlighter"
+          >Aliquid eius aut similique, sed quia nihil, natus magnam dolor
+          numquam iusto saepe inventore accusantium ipsum, ipsa et atque.
+          Asperiores laboriosam non tempora illo? Facere ipsa unde impedit
+          quidem optio!</span
+        ><span
+          >A voluptate earum, unde laborum impedit perspiciatis deserunt
+          expedita cupiditate aliquam repudiandae minus odit mollitia error
+          possimus nemo aut? Rem atque rerum nulla reprehenderit perspiciatis?
+          Distinctio corporis rerum reiciendis temporibus.</span
+        >
+      </p>
     </div>
+    <!-- 🕸️ Emmet: a + Tab → <a href=""></a> -->
     <p><a href="../../index.html">Home</a></p>
     <!-- ../../ goes up two folder levels to reach the root index.html -->
-</body>
-
+  </body>
 </html>

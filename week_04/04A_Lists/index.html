@@ -1,57 +1,58 @@
-<!DOCTYPE html>
+<!-- 🕸️ Emmet: In a blank .html file, type ! then Tab to generate this entire boilerplate -->
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>lists</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body>
+  <body>
     <!-- All visible content lives inside <body> -->
     <h1>Lists</h1>
 
     <!-- <ol> = ordered list — items are numbered automatically by the browser -->
     <h2>Ordered Lists</h2>
     <h3>Caffeine Potency</h3>
+    <!-- 🕸️ Emmet: ol>li*3 + Tab → ol with 3 li items pre-nested -->
     <ol>
-        <!-- <li> = list item; used inside both <ol> and <ul> -->
-        <li>Monster Rehab</li>
-        <li>Espresso Drinks
-            <!-- Nested <ol> inside <li> creates a sub-list indented one level -->
-            <!-- The nested list belongs only to the "Espresso Drinks" item -->
-            <ol>
-                <li>Latte</li>
-                <li>Americano</li>
-            </ol>
-        </li>
-        <li>Arnold Palmer</li>
+      <!-- <li> = list item; used inside both <ol> and <ul> -->
+      <li>Monster Rehab</li>
+      <li>
+        Espresso Drinks
+        <!-- Nested <ol> inside <li> creates a sub-list indented one level -->
+        <!-- The nested list belongs only to the "Espresso Drinks" item -->
+        <ol>
+          <li>Latte</li>
+          <li>Americano</li>
+        </ol>
+      </li>
+      <li>Arnold Palmer</li>
     </ol>
 
     <!-- <ul> = unordered list — items use bullet points instead of numbers -->
     <h2>Unordered Lists</h2>
     <h3>Favorite Deserts</h3>
+    <!-- 🕸️ Emmet: ul>li*3 + Tab → ul with 3 li items pre-nested -->
     <ul>
-
-        <li>Cheesecake</li>
-        <li>Ice Cream
-            <!-- Nested <ul> creates a sub-list with a different bullet style -->
-            <ul>
-                <li>Cherry Garcia</li>
-                <li>Pistachio</li>
-            </ul>
-
-        </li>
-        <li>Lemon Meringue Pie</li>
+      <li>Cheesecake</li>
+      <li>
+        Ice Cream
+        <!-- Nested <ul> creates a sub-list with a different bullet style -->
+        <ul>
+          <li>Cherry Garcia</li>
+          <li>Pistachio</li>
+        </ul>
+      </li>
+      <li>Lemon Meringue Pie</li>
     </ul>
 
     <!-- <footer> = semantic element for closing/navigation content -->
+    <!-- 🕸️ Emmet: footer + Tab → <footer></footer> -->
     <footer>
-        <p><a href="../../index.html">Home</a></p>
-        <!-- ../../ goes up two folder levels to reach the root index.html -->
+      <p><a href="../../index.html">Home</a></p>
+      <!-- ../../ goes up two folder levels to reach the root index.html -->
     </footer>
-
-</body>
-
+  </body>
 </html>

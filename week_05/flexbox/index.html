@@ -1,41 +1,180 @@
-﻿<!-- ===== DOCUMENT TYPE DECLARATION ===== -->
-<!-- <!DOCTYPE html> tells the browser this is an HTML5 document; must be first line -->
+﻿<!-- 🕸️ Emmet: In a blank .html file, type ! then Tab to generate this entire boilerplate -->
 <!doctype html>
-
-<!-- ===== ROOT ELEMENT ===== -->
-<!-- <html lang="en"> wraps all content; lang="en" declares English for accessibility -->
 <html lang="en">
-  <!-- ===== METADATA & PAGE CONFIGURATION ===== -->
-  <!-- <head> contains setup info; nothing here displays on the page -->
   <head>
-    <!-- UTF-8 character encoding supports all world languages and symbols -->
     <meta charset="UTF-8" />
-    <!-- Viewport meta tag: tells the browser to scale the page for mobile devices -->
-    <!-- width=device-width: page width = device screen width -->
-    <!-- initial-scale=1.0: starts at 100% zoom (1x); no automatic zooming -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <title> appears in browser tab and search results -->
-    <title>Flex Container</title>
-    <!-- <link> connects this HTML file to an external CSS stylesheet -->
-    <!-- rel="stylesheet" declares the relationship type -->
-    <!-- href="style.css" points to the CSS file (relative path, same folder) -->
+    <title>Sparky & Dot's Cherokee Adventure</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-
-  <!-- ===== PAGE CONTENT ===== -->
   <body>
-    <!-- ===== 📦 FLEXBOX: HOW IT WORKS IN HTML ===== -->
-    <!-- ℹ️ Flexbox is a CSS layout tool — HTML just needs to provide a parent-child structure -->
-    <!-- ℹ️ FLEX CONTAINER = the parent element that gets "display: flex" in the CSS -->
-    <!-- ℹ️ FLEX ITEMS = the direct children of that container; they get arranged automatically -->
-    <!-- 💡 No special HTML tags or attributes are needed — flexbox is controlled entirely in CSS! -->
-    <!-- ⚠️ Only DIRECT children become flex items — deeper nested elements are NOT affected -->
-    <!-- <h1> = primary page heading; use only ONE per page -->
-    <h1>Flex Container</h1>
+    <!-- =============================================================
+         YOUR ASSIGNMENT BUILDS THIS HERO SECTION
+         Structure: div.hero > div.hero-text + div.hero-img
+         🕸️ Emmet: div.hero>(div.hero-text>h1+p+button)+(div.hero-img>img) + Tab → builds the entire structure!
+         ============================================================= -->
+    <!-- ℹ️ info: Hero — .hero is the flex parent, splitting content 50/50 -->
+    <!-- 🕸️ Emmet: div.hero + Tab → <div class="hero"></div> -->
+    <div class="hero">
+      <!-- 💡tip: .hero-text is a flex item with flex-basis: 50% -->
+      <div class="hero-text">
+        <h1>Sparky &amp; Dot Hit the Mountains!</h1>
+        <!-- ↑ WHY &amp;amp; instead of &?
+             The & character is reserved in HTML — it signals the start of a
+             special code called an HTML Entity. A bare & can confuse the
+             browser, so we write &amp;amp; to mean "just show an ampersand."
+             Think of it as an escape code. See the reference section below! -->
+        <p>
+          Two ducks. One waterfall. Zero regrets. Follow Sparky and Dot on their
+          long-weekend getaway to Cherokee, North Carolina.
+        </p>
 
-    <!-- <p> = paragraph; a block-level element that starts on a new line -->
-    <!-- &mdash; is an HTML entity representing an em-dash (— character) -->
-    <!-- HTML entities are used when you want to display characters that have special meaning in HTML -->
-    <p>Week 05 &mdash; ADD 103 Web Development Fundamentals</p>
+        <!-- ⚠️ warning: .button-group below is the NESTING DEMO from the lesson.
+             YOUR ASSIGNMENT: just put a plain <button> inside .hero-text
+             with no wrapper — it stays left by default. Trick question!
+             The wrapper is here to demonstrate a flex item becoming a
+             flex container (the nesting concept). -->
+        <div class="button-group">
+          <!-- ℹ️ href="#main" is an INTERNAL LINK (anchor link).
+               The # means "find an id on THIS page."
+               Clicking jumps to the element with id="main" — no new page loads.
+               YOUR ASSIGNMENT: use <button>Your Text</button> here instead. -->
+          <a href="#main" class="btn">Read Their Story</a>
+        </div>
+      </div>
+
+      <!-- 💡tip: .hero-img is also a flex item with flex-basis: 50% -->
+      <!-- 🕸️ Emmet: div.hero-img + Tab -->
+      <div class="hero-img">
+        <!-- 🕸️ Emmet: img + Tab → <img src="" alt=""> -->
+        <img
+          src="images/ducks.jpg"
+          alt="Sparky and Dot posing in front of a waterfall in Cherokee, NC"
+        />
+      </div>
+    </div>
+
+    <!-- =============================================================
+         EVERYTHING BELOW IS EXTRA DEMO CONTENT — not in your assignment
+         ============================================================= -->
+    <!-- ℹ️ info: .page-wrapper is a flex parent for the sidebar + content layout -->
+    <div class="page-wrapper">
+      <!-- 💡tip: .sidebar has a fixed width and flex-grow: 0 — it never stretches -->
+      <!-- 🕸️ Emmet: aside.sidebar + Tab → <aside class="sidebar"></aside> -->
+      <aside class="sidebar">
+        <h3 class="first-heading">Quick Facts</h3>
+        <!-- 🕸️ Emmet: ul>li*5 + Tab → ul with 5 li items pre-nested -->
+        <ul>
+          <li>📍 Cherokee, NC</li>
+          <li>🗓️ Labor Day Weekend</li>
+          <li>🦆 Travelers: 2</li>
+          <li>💧 Waterfalls Visited: 4</li>
+          <li class="last-item">🌲 Trails Hiked: 3</li>
+        </ul>
+        <h3>Highlights</h3>
+        <ul>
+          <li>Mingo Falls</li>
+          <li>Oconaluftee Village</li>
+          <li>Blue Ridge Parkway</li>
+          <li class="last-item">Harrah's Cherokee (Sparky lost $4)</li>
+        </ul>
+      </aside>
+
+      <!-- 💡tip: .content has flex-grow: 1 — it eats ALL remaining space -->
+      <!-- ℹ️ id="main" is the ANCHOR TARGET.
+           An id must be unique — only ONE element on the page can have it.
+           The button's href="#main" scrolls here when clicked. -->
+      <!-- 🕸️ Emmet: main.content#main + Tab → class AND id at the same time! -->
+      <main class="content" id="main">
+        <h2 class="first-heading">Day One: Arrival at Mingo Falls</h2>
+        <p>
+          Sparky navigated. Dot packed snacks. After a four-hour drive into the
+          Smoky Mountains, the two ducks checked into their cozy cabin just
+          outside the Qualla Boundary. First stop: Mingo Falls — one of the
+          tallest waterfalls in the Southern Appalachians.
+        </p>
+        <p>
+          "The mist felt incredible," Dot reportedly quacked. "Sparky just stood
+          there with his hat on looking majestic."
+        </p>
+
+        <h2>Day Two: History &amp; Fry Bread</h2>
+        <p>
+          The duo visited Oconaluftee Village, a living museum of Eastern Band
+          Cherokee culture. Dot was deeply moved by the traditional basket
+          weaving demonstration. Sparky ate too much fry bread and needed a nap.
+        </p>
+
+        <h2>Day Three: The Blue Ridge Parkway</h2>
+        <p>
+          Clear skies, 70°F, and mountain views that went on forever. Sparky and
+          Dot drove the Parkway at sunrise, pulling over at every overlook. Dot
+          took 47 photos. Sparky is in none of them — apparently he was "the
+          driver."
+        </p>
+
+        <!-- ============================================================
+             HTML ENTITIES REFERENCE
+             ============================================================ -->
+        <h2>📌 What Is <code>&amp;amp;</code>?</h2>
+        <p>
+          Notice <code>&amp;amp;</code> in the source code wherever you see
+          Sparky <strong>&amp;</strong> Dot's name. The
+          <code>&amp;</code> character is <strong>reserved</strong> in HTML — it
+          signals the start of a special code called an
+          <strong>HTML Entity</strong>. Writing a bare <code>&</code> can
+          confuse the browser, so we escape it as <code>&amp;amp;</code> to mean
+          “just show an ampersand.”
+        </p>
+        <p>A few entities you'll use all the time:</p>
+        <ul class="entity-list">
+          <li><code>&amp;amp;</code> &rarr; &amp; &nbsp; (ampersand)</li>
+          <li>
+            <code>&amp;lt;</code> &rarr; &lt; &nbsp; (less-than / opening angle
+            bracket)
+          </li>
+          <li>
+            <code>&amp;gt;</code> &rarr; &gt; &nbsp; (greater-than / closing
+            angle bracket)
+          </li>
+          <li>
+            <code>&amp;copy;</code> &rarr; &copy; &nbsp; (copyright symbol)
+          </li>
+          <li>
+            <code>&amp;mdash;</code> &rarr; &mdash; &nbsp; (em dash — used for
+            pauses)
+          </li>
+          <li>
+            <code>&amp;nbsp;</code> &rarr; (non-breaking space — keeps two words
+            glued together)
+          </li>
+          <li><code>&amp;hellip;</code> &rarr; &hellip; &nbsp; (ellipsis)</li>
+          <li><code>&amp;rarr;</code> &rarr; &rarr; &nbsp; (right arrow)</li>
+        </ul>
+        <p>Where to find more:</p>
+        <ul class="entity-list">
+          <li>
+            <a
+              href="https://www.w3schools.com/html/html_entities.asp"
+              target="_blank"
+              >W3Schools — HTML Entities</a
+            >
+            (beginner-friendly)
+          </li>
+          <li>
+            <a href="https://entitycode.com/" target="_blank">EntityCode.com</a>
+            — searchable, copy-paste ready
+          </li>
+          <li>
+            <a
+              href="https://html.spec.whatwg.org/multipage/named-characters.html"
+              target="_blank"
+              >Official HTML spec</a
+            >
+            — the complete list
+          </li>
+        </ul>
+      </main>
+    </div>
   </body>
 </html>

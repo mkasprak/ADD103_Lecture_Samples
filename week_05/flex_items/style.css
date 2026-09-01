@@ -99,7 +99,7 @@ h2 {
   /* Removes the default top and bottom margins */
   margin: 0;
   /* Makes the name slightly larger than normal text (1.2x current size) */
-  font-size: 1.2rem;
+  font-size: 19px;
   /* Dark gray color for good readability */
   color: #333;
 }
@@ -117,7 +117,7 @@ h2 {
 /* ===== DESCRIPTION TEXT STYLING ===== */
 p {
   /* Makes text slightly smaller (90% of normal size) */
-  font-size: 0.9rem;
+  font-size: 14px;
   /* Medium gray color for descriptions */
   color: #666;
   /* Increases space between lines for better readability */
@@ -146,5 +146,5 @@ p {
   /* Creates pill-shaped button with highly rounded corners */
   border-radius: 20px;
   /* Makes button text slightly smaller */
-  font-size: 0.8rem;
+  font-size: 13px;
 }

@@ -1,54 +1,196 @@
-﻿/* ===== FLEXBOX LAYOUT GUIDE ===== */
-/* Flex Container
-   ADD 103 Web Development Fundamentals
-   ===================================== */
+﻿/* === BASE ===
+   * is the UNIVERSAL SELECTOR — it targets every single element on the page.
+   You haven't used it yet, but it works just like any other selector.
+   It's commonly used at the top of a stylesheet as a "reset" to wipe out the
+   default margin and padding browsers add to elements like <body> and <h1>.
 
-/* ===== UNIVERSAL SELECTOR RESET ===== */
-/* * targets every element on the page */
+   box-sizing: border-box you already know from Week 4.
+   Putting it on * applies it to everything at once instead of
+   adding it to each selector individually. */
 * {
-  /* border-box: padding and borders are included in the element's width/height */
-  /* Without this, padding makes elements wider than the assigned width */
-  /* This is considered a CSS best practice and should be used on every project */
   box-sizing: border-box;
-  /* Removes all default browser margins (gutters) around elements */
-  /* Gives us a clean slate to build from */
   margin: 0;
-  /* Removes all default padding (interior spacing) */
-  /* Combined with margin: 0, this prevents unwanted spacing */
   padding: 0;
 }
 
-/* ===== BODY STYLING ===== */
 body {
-  /* Sets the default font for the entire page */
-  /* sans-serif is a generic fallback; the browser will choose an appropriate sans-serif font */
-  font-family: sans-serif;
-  /* Adds 2rem (2× the root font size, typically 16px = 32px) of padding */
-  /* Rem units = relative to the root <html> element, making layouts more maintainable */
-  /* This creates a comfortable margin around all content */
-  padding: 2rem;
+  font-family: Georgia, serif;
+  background-color: #f9f5f0;
+  color: #2c2c2c;
 }
 
-/* ===== 📦 FLEXBOX QUICK REFERENCE ===== */
-/* ℹ️ Apply "display: flex" to a PARENT element to activate flexbox on its children */
-/* ℹ️ That parent becomes the FLEX CONTAINER; its direct children become FLEX ITEMS */
-/*                                                                        */
-/* 🔑 FLEX CONTAINER properties (go on the parent):                       */
-/*   display: flex           → Activates flexbox — this line is required! */
-/*   flex-direction: row     → Main axis goes left → right (default)      */
-/*   flex-direction: column  → Main axis goes top → bottom                */
-/*   justify-content         → ℹ️ Aligns items along the MAIN axis        */
-/*   align-items             → ℹ️ Aligns items along the CROSS axis       */
-/*   flex-wrap: wrap         → 💡 Items wrap to the next line (responsive!)*/
-/*   gap                     → 💡 Space between items only (not at edges) */
-/*                                                                        */
-/* ⚠️ MAIN AXIS vs CROSS AXIS:                                            */
-/*   flex-direction: row    → Main = left/right  │ Cross = up/down        */
-/*   flex-direction: column → Main = up/down     │ Cross = left/right     */
-/*                                                                        */
-/* 🔑 FLEX ITEM properties (go on the children):                          */
-/*   flex-grow              → How much an item grows to fill leftover space*/
-/*   flex-shrink            → How much an item shrinks when space is tight */
-/*   align-self             → Overrides align-items for just ONE item     */
-/*   margin: auto           → 💡 Absorbs free space to push items apart   */
+/* ============================================================
+   HERO — 50/50 Split
+   ℹ️ info: The Parent Container
+   ============================================================ */
+.hero {
+  display: flex;
+  align-items: center;
+  background-color: #2d5016;
+  color: #f9f5f0;
+  min-height: 400px;
+}
 
+.hero-text {
+  flex-basis: 50%; /* ✅ YOUR ASSIGNMENT needs this */
+  /* flex-grow controls how much EXTRA space an item eats up after flex-basis is set.
+     flex-grow: 0 = don't grow, stay at your flex-basis size (the default)
+     flex-grow: 1 = grow to fill remaining space
+     flex-grow: 2 = grow twice as fast as a sibling with flex-grow: 1
+     Both children here are 1, so they share extra space equally — staying 50/50. */
+  flex-grow: 1; /* Bonus: not required for your assignment */
+  padding: 48px;
+}
+
+.hero-text h1 {
+  font-size: 40px;
+  margin-bottom: 16px;
+  color: #f4c430;
+}
+
+.hero-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.hero-img {
+  flex-basis: 50%; /* ✅ YOUR ASSIGNMENT needs this */
+  flex-grow: 1; /* Same value as .hero-text = they grow equally, keeping the 50/50 split */
+}
+
+.hero-img img {
+  width: 100%;
+  display: block;
+}
+
+/* ============================================================
+   BUTTON GROUP
+   ⚠️ warning: Nesting — turning a flex ITEM into a flex CONTAINER
+   ============================================================ */
+.button-group {
+  display: flex; /* ℹ️ info: This child is now ALSO a flex container */
+  align-self: flex-start; /* 💡tip: Child overrides parent's align-items */
+}
+
+.button-group .btn {
+  background-color: #f4c430;
+  color: #2d5016;
+  text-decoration: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.button-group .btn:hover {
+  background-color: #e0b020;
+}
+
+/* ============================================================
+   PAGE WRAPPER — Sidebar + Content
+   ℹ️ THE WRAPPER
+   ============================================================ */
+.page-wrapper {
+  display: flex;
+  max-width: 1100px;
+  margin: 32px auto;
+  gap: 32px;
+  padding: 0 24px;
+}
+
+/* ℹ️ THE SIDEBAR (Fixed Width) */
+.sidebar {
+  width: 250px;
+  flex-grow: 0; /* Don't get huge */
+  background-color: #e8f0e9;
+  padding: 24px;
+  border-radius: 6px;
+}
+
+.sidebar h3 {
+  color: #2d5016;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+/* We added class="first-heading" to the first h3 in the HTML.
+   Later we'll learn :first-child which targets it automatically —
+   no extra class needed! */
+.sidebar .first-heading {
+  margin-top: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  padding: 6px 0;
+  font-size: 14px;
+  border-bottom: 1px solid #c8dac9;
+}
+
+/* We added class="last-item" to the last <li> in each list.
+   Later we'll learn :last-child which targets it automatically —
+   no extra class needed! */
+.sidebar .last-item {
+  border-bottom: none;
+}
+
+/* ℹ️ THE CONTENT (Fluid Width) */
+.content {
+  background: white;
+  flex-grow: 1; /* Eat ALL the remaining space! */
+  padding: 32px;
+  border-radius: 6px;
+}
+
+.content h2 {
+  color: #2d5016;
+  font-size: 22px;
+  margin-top: 28px;
+  margin-bottom: 10px;
+}
+
+/* We added class="first-heading" to the first h2 in the HTML.
+   Later we'll learn :first-child which targets it automatically —
+   no extra class needed! */
+.content .first-heading {
+  margin-top: 0;
+}
+
+.content p {
+  line-height: 1.7;
+  margin-bottom: 16px;
+  color: #444;
+}
+
+.content code {
+  font-family: "Courier New", monospace;
+  background-color: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 14px;
+  color: #2d5016;
+}
+
+.content .entity-list {
+  list-style: none;
+  margin: 8px 0 16px 0;
+  padding: 0;
+}
+
+.content .entity-list li {
+  padding: 6px 10px;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+}
+
+.content .entity-list a {
+  color: #2d5016;
+}
