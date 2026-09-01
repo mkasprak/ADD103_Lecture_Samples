@@ -1,4 +1,4 @@
-<!-- 🕸️ Emmet: In a blank .html file, type ! then Tab to generate this entire boilerplate -->
+﻿<!-- ðŸ•¸ï¸ Emmet: In a blank .html file, type ! then Tab to generate this entire boilerplate -->
 <!doctype html>
 <html lang="en">
   <head>
@@ -20,17 +20,17 @@
     =========================================== -->
 
     <!-- <header> = top banner / masthead of the page or a section -->
-    <!-- 🕸️ Emmet: header + Tab → <header></header> -->
+    <!-- ðŸ•¸ï¸ Emmet: header + Tab â†’ <header></header> -->
     <header>
       <h1>Masthead Section</h1>
     </header>
 
     <!-- <main> = the primary, unique content of the page (use only once) -->
-    <!-- 🕸️ Emmet: main + Tab → <main></main> -->
+    <!-- ðŸ•¸ï¸ Emmet: main + Tab â†’ <main></main> -->
     <main>
-      <!-- <aside> floated right inside <main> — like a callout box in a magazine article -->
+      <!-- <aside> floated right inside <main> â€” like a callout box in a magazine article -->
       <!-- float: right pulls it out of normal flow; surrounding content wraps to its left -->
-      <!-- 🕸️ Emmet: aside + Tab → <aside></aside> -->
+      <!-- ðŸ•¸ï¸ Emmet: aside + Tab â†’ <aside></aside> -->
       <aside>
         <h3>What is <code>&lt;aside&gt;</code>?</h3>
         <p>
@@ -41,14 +41,14 @@
         </p>
 
         <!-- <details> = collapsible section; <summary> = the always-visible clickable label -->
-        <!-- No JavaScript needed — the browser handles open/close natively -->
-        <!-- 🕸️ Emmet: details>summary + Tab → nests <summary> inside <details> in one shot -->
+        <!-- No JavaScript needed â€” the browser handles open/close natively -->
+        <!-- ðŸ•¸ï¸ Emmet: details>summary + Tab â†’ nests <summary> inside <details> in one shot -->
         <details>
           <summary>How does <code>float</code> work?</summary>
           <p>
             <code>float: right</code> removes an element from the normal
             document flow and pushes it to the right edge of its container.
-            Other content then wraps around its left side — exactly like a photo
+            Other content then wraps around its left side â€” exactly like a photo
             caption in a newspaper column.
           </p>
           <p>
@@ -62,10 +62,10 @@
 
       <!-- styled in styles.css to add a background tint so it stands out from body text -->
       <p>
-        <strong>📌 Assignment focus:</strong> Your project requires column
+        <strong>ðŸ“Œ Assignment focus:</strong> Your project requires column
         cards, CSS variables, and a hover tooltip. Everything else on this page
-        — <code>&lt;details&gt;</code>, <code>float</code>, HTML entities, and
-        <code>object-fit</code> — is here for exploration. You are not expected
+        â€” <code>&lt;details&gt;</code>, <code>float</code>, HTML entities, and
+        <code>object-fit</code> â€” is here for exploration. You are not expected
         to use them in your submission.
       </p>
 
@@ -83,26 +83,26 @@
       </h2>
       <p>
         By default, block elements like <code>&lt;div&gt;</code> stack
-        vertically — each one takes the full width of the page. Switching to
+        vertically â€” each one takes the full width of the page. Switching to
         <code>display: inline-block</code> lets them sit side by side, like
         words in a sentence. Open <strong>styles.css</strong> and toggle the
         <code>display</code> property on <code>.column-card</code> to see the
         difference.
       </p>
       <p>
-        <strong>The 48% bug:</strong> You might expect <code>width: 48%</code> ×
-        2 cards to fit on one row — but <code>inline-block</code> treats the
+        <strong>The 48% bug:</strong> You might expect <code>width: 48%</code> Ã—
+        2 cards to fit on one row â€” but <code>inline-block</code> treats the
         whitespace (newlines, spaces) between HTML tags as a real character.
         That invisible character pushes the second card down. The fix is
         dropping to <code>width: 47%</code>. Try it yourself: change
         <code>47%</code> to <code>48%</code> in styles.css and watch it break.
       </p>
 
-      <!-- <div> is a non-semantic block container — used here for layout only -->
-      <!-- 🕸️ Emmet: div.column-card + Tab → <div class="column-card"></div> -->
+      <!-- <div> is a non-semantic block container â€” used here for layout only -->
+      <!-- ðŸ•¸ï¸ Emmet: div.column-card + Tab â†’ <div class="column-card"></div> -->
       <div class="column-card">
-        <!-- Hover over the term to see the tooltip — .tooltiptext is the hidden popup -->
-        <!-- 🕸️ Emmet: span.tooltip + Tab → <span class="tooltip"></span> -->
+        <!-- Hover over the term to see the tooltip â€” .tooltiptext is the hidden popup -->
+        <!-- ðŸ•¸ï¸ Emmet: span.tooltip + Tab â†’ <span class="tooltip"></span> -->
         <h2>
           Learn
           <span class="tooltip"
@@ -113,7 +113,7 @@
       </div>
 
       <div class="column-card">
-        <!-- Same tooltip pattern applied to a second term —  repetition reinforces the structure -->
+        <!-- Same tooltip pattern applied to a second term â€”  repetition reinforces the structure -->
         <h2>
           Learn
           <span class="tooltip"
@@ -126,31 +126,31 @@
       </div>
 
       <!-- ============================================================
-             PROFILE CARDS — also inline-block
+             PROFILE CARDS â€” also inline-block
              Same display rule as above; swap to block to compare.
         ============================================================ -->
       <h2>Semantic Profile Cards</h2>
       <p>
         These cards use the <code>&lt;article&gt;</code> element instead of
         <code>&lt;div&gt;</code>. The same
-        <code>display: inline-block</code> rule applies — the layout behavior is
+        <code>display: inline-block</code> rule applies â€” the layout behavior is
         identical, but the HTML now communicates <em>meaning</em>: this is
         self-contained content that could stand alone on any page. The template
         card below uses a placeholder image from
         <a href="https://placehold.co" target="_blank" rel="noopener"
           >placehold.co</a
         >
-        — copy the whole <code>&lt;article&gt;</code> block and replace the
+        â€” copy the whole <code>&lt;article&gt;</code> block and replace the
         values to add more cards.
       </p>
       <!-- =====================================================
-             TEMPLATE CARD — copy and paste this block for each
+             TEMPLATE CARD â€” copy and paste this block for each
              person/item, then replace the placeholder values.
              ===================================================== -->
       <article class="card">
         <header class="card-header">
           <!-- placehold.co generates a placeholder image at any size you need -->
-          <!-- Format: https://placehold.co/WIDTHxHEIGHT — swap in a real image when ready -->
+          <!-- Format: https://placehold.co/WIDTHxHEIGHT â€” swap in a real image when ready -->
           <img src="https://placehold.co/200x200" alt="Person Name" />
           <h2>Person Name</h2>
         </header>
@@ -195,17 +195,20 @@
       <p>
         <span class="tooltip"
           >&copy;<span class="tooltiptext"
-            >&amp;copy; — HTML entity for the copyright symbol ©</span
+            >&amp;copy; â€” HTML entity for the copyright symbol Â©</span
           ></span
         >
         2026 Meri Kasprak
         <span class="tooltip"
           >&mdash;<span class="tooltiptext"
-            >&amp;mdash; — HTML entity for an em dash —</span
+            >&amp;mdash; â€” HTML entity for an em dash â€”</span
           ></span
         >
         developed in collaboration with GitHub Copilot (AI)
       </p>
     </footer>
-  </body>
+      <footer>
+      <p>Created by Dr. Meri Kasprak in AntiGravity with collaboration from AI.</p>
+      <p><a href="../../index.html">🏚️ Home</a></p>
+    </footer>  </body>
 </html>

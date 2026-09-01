@@ -1,4 +1,4 @@
-﻿<!-- 🕸️ Emmet: In a blank .html file, type ! then Tab to generate this entire boilerplate -->
+﻿<!-- ??? Emmet: In a blank .html file, type ! then Tab to generate this entire boilerplate -->
 <!doctype html>
 <html lang="en">
   <head>
@@ -11,15 +11,15 @@
     <!-- =============================================================
          YOUR ASSIGNMENT BUILDS THIS HERO SECTION
          Structure: div.hero > div.hero-text + div.hero-img
-         🕸️ Emmet: div.hero>(div.hero-text>h1+p+button)+(div.hero-img>img) + Tab → builds the entire structure!
+         ??? Emmet: div.hero>(div.hero-text>h1+p+button)+(div.hero-img>img) + Tab ? builds the entire structure!
          ============================================================= -->
-    <!-- ℹ️ info: Hero — .hero is the flex parent, splitting content 50/50 -->
-    <!-- 🕸️ Emmet: div.hero + Tab → <div class="hero"></div> -->
+    <!-- ?? info: Hero — .hero is the flex parent, splitting content 50/50 -->
+    <!-- ??? Emmet: div.hero + Tab ? <div class="hero"></div> -->
     <div class="hero">
-      <!-- 💡tip: .hero-text is a flex item with flex-basis: 50% -->
+      <!-- ??tip: .hero-text is a flex item with flex-basis: 50% -->
       <div class="hero-text">
         <h1>Sparky &amp; Dot Hit the Mountains!</h1>
-        <!-- ↑ WHY &amp;amp; instead of &?
+        <!-- ? WHY &amp;amp; instead of &?
              The & character is reserved in HTML — it signals the start of a
              special code called an HTML Entity. A bare & can confuse the
              browser, so we write &amp;amp; to mean "just show an ampersand."
@@ -29,13 +29,13 @@
           long-weekend getaway to Cherokee, North Carolina.
         </p>
 
-        <!-- ⚠️ warning: .button-group below is the NESTING DEMO from the lesson.
+        <!-- ?? warning: .button-group below is the NESTING DEMO from the lesson.
              YOUR ASSIGNMENT: just put a plain <button> inside .hero-text
              with no wrapper — it stays left by default. Trick question!
              The wrapper is here to demonstrate a flex item becoming a
              flex container (the nesting concept). -->
         <div class="button-group">
-          <!-- ℹ️ href="#main" is an INTERNAL LINK (anchor link).
+          <!-- ?? href="#main" is an INTERNAL LINK (anchor link).
                The # means "find an id on THIS page."
                Clicking jumps to the element with id="main" — no new page loads.
                YOUR ASSIGNMENT: use <button>Your Text</button> here instead. -->
@@ -43,10 +43,10 @@
         </div>
       </div>
 
-      <!-- 💡tip: .hero-img is also a flex item with flex-basis: 50% -->
-      <!-- 🕸️ Emmet: div.hero-img + Tab -->
+      <!-- ??tip: .hero-img is also a flex item with flex-basis: 50% -->
+      <!-- ??? Emmet: div.hero-img + Tab -->
       <div class="hero-img">
-        <!-- 🕸️ Emmet: img + Tab → <img src="" alt=""> -->
+        <!-- ??? Emmet: img + Tab ? <img src="" alt=""> -->
         <img
           src="images/ducks.jpg"
           alt="Sparky and Dot posing in front of a waterfall in Cherokee, NC"
@@ -57,19 +57,19 @@
     <!-- =============================================================
          EVERYTHING BELOW IS EXTRA DEMO CONTENT — not in your assignment
          ============================================================= -->
-    <!-- ℹ️ info: .page-wrapper is a flex parent for the sidebar + content layout -->
+    <!-- ?? info: .page-wrapper is a flex parent for the sidebar + content layout -->
     <div class="page-wrapper">
-      <!-- 💡tip: .sidebar has a fixed width and flex-grow: 0 — it never stretches -->
-      <!-- 🕸️ Emmet: aside.sidebar + Tab → <aside class="sidebar"></aside> -->
+      <!-- ??tip: .sidebar has a fixed width and flex-grow: 0 — it never stretches -->
+      <!-- ??? Emmet: aside.sidebar + Tab ? <aside class="sidebar"></aside> -->
       <aside class="sidebar">
         <h3 class="first-heading">Quick Facts</h3>
-        <!-- 🕸️ Emmet: ul>li*5 + Tab → ul with 5 li items pre-nested -->
+        <!-- ??? Emmet: ul>li*5 + Tab ? ul with 5 li items pre-nested -->
         <ul>
-          <li>📍 Cherokee, NC</li>
-          <li>🗓️ Labor Day Weekend</li>
-          <li>🦆 Travelers: 2</li>
-          <li>💧 Waterfalls Visited: 4</li>
-          <li class="last-item">🌲 Trails Hiked: 3</li>
+          <li>?? Cherokee, NC</li>
+          <li>??? Labor Day Weekend</li>
+          <li>?? Travelers: 2</li>
+          <li>?? Waterfalls Visited: 4</li>
+          <li class="last-item">?? Trails Hiked: 3</li>
         </ul>
         <h3>Highlights</h3>
         <ul>
@@ -80,11 +80,11 @@
         </ul>
       </aside>
 
-      <!-- 💡tip: .content has flex-grow: 1 — it eats ALL remaining space -->
-      <!-- ℹ️ id="main" is the ANCHOR TARGET.
+      <!-- ??tip: .content has flex-grow: 1 — it eats ALL remaining space -->
+      <!-- ?? id="main" is the ANCHOR TARGET.
            An id must be unique — only ONE element on the page can have it.
            The button's href="#main" scrolls here when clicked. -->
-      <!-- 🕸️ Emmet: main.content#main + Tab → class AND id at the same time! -->
+      <!-- ??? Emmet: main.content#main + Tab ? class AND id at the same time! -->
       <main class="content" id="main">
         <h2 class="first-heading">Day One: Arrival at Mingo Falls</h2>
         <p>
@@ -116,7 +116,7 @@
         <!-- ============================================================
              HTML ENTITIES REFERENCE
              ============================================================ -->
-        <h2>📌 What Is <code>&amp;amp;</code>?</h2>
+        <h2>?? What Is <code>&amp;amp;</code>?</h2>
         <p>
           Notice <code>&amp;amp;</code> in the source code wherever you see
           Sparky <strong>&amp;</strong> Dot's name. The
@@ -176,5 +176,8 @@
         </ul>
       </main>
     </div>
-  </body>
+      <footer>
+      <p>Created by Dr. Meri Kasprak in AntiGravity with collaboration from AI.</p>
+      <p><a href="../../index.html">🏚️ Home</a></p>
+    </footer>  </body>
 </html>
