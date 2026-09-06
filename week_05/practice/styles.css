@@ -1,6 +1,6 @@
 /* I'm using on page styles just to see and change them while I work */
 body {
-  background: rgb(240, 227, 153);
+  background: rgb(240, 232, 186);
   color: rgb(87, 8, 87);
 }
 
@@ -13,8 +13,8 @@ p {
   background-color: rgb(87, 9, 87);
   display: flex;
   min-height: 150px;
-  width: 60%;
-  margin: 10px auto;
+  width: 70%;
+  margin: 30px auto;
 }
 .flex_div {
   background: rgb(234, 231, 212);
