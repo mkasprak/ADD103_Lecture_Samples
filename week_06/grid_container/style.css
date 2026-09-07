@@ -27,29 +27,31 @@
             margin-bottom: 10px;
         }
 
-        /* THE GRID CONTAINER */
+        /* 🕸️ Grid parent: turns direct children into grid items */
         .newspaper-grid {
+            /* ⚙️ display: grid activates CSS Grid layout */
             display: grid;
 
-            /* 12 Column System (Standard) */
+            /* 📐 repeat(4, 1fr) = 4 equal columns using fraction units */
             grid-template-columns: repeat(4, 1fr);
 
-            /* Rows defined automatically */
+            /* ↕️ Rows auto-size based on content unless explicitly defined */
             gap: 20px;
+            /* 🧭 gap adds space between both rows and columns */
         }
 
-        /* THE GRID ITEMS */
+        /* 🧱 Shared card styling for every grid item */
         .article {
             background: white;
             padding: 15px;
             border: 1px solid #eee;
         }
 
-        /* SPANNING LOGIC */
+        /* 📏 Spanning logic: control how many columns each item consumes */
 
         .hero-story {
             grid-column: span 4;
-            /* Full width top story */
+            /* 📰 Full width across all 4 columns */
             border-bottom: 2px solid #333;
         }
 
@@ -65,24 +67,24 @@
 
         .side-story {
             grid-column: span 1;
-            /* Narrow column */
+            /* 📌 Single-column sidebar */
             background-color: #f0f0f0;
         }
 
         .main-story {
             grid-column: span 2;
-            /* Middle wide columns */
+            /* ⭐ Center story spans two columns */
         }
 
         .opinion-piece {
             grid-column: span 1;
-            /* Right column */
+            /* 🗨️ Single-column opinion rail */
             border-left: 2px solid #333;
         }
 
         .footer-ad {
             grid-column: span 4;
-            /* Full width bottom */
+            /* 📢 Full-width banner at the bottom */
             background-color: #333;
             color: white;
             text-align: center;
