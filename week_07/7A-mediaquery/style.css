@@ -1,30 +1,49 @@
 
+        /* =============================================================
+           📱 WEEK 7: MEDIA QUERIES & RESPONSIVE DESIGN
+           Strategy: Mobile-First CSS Architecture
+           1. Write base styles for small mobile screens first
+           2. Use @media (min-width: ...) to layer on layout changes for larger screens
+           ============================================================= */
+
+        /* 🎨 BASE STYLES: Default styles for mobile phones & all screen sizes */
         body {
             font-family: 'Segoe UI', sans-serif;
-            background-color: #f0f2f5;
+            background-color: #f0f2f5; /* 📱 Mobile default background: neutral grey */
             margin: 0;
             padding: 20px;
         }
 
-        /* 1. MOBILE DEFAULT (1 COLUMN) */
-        .card-container {
-            display: grid;
-            grid-template-columns: 1fr;
-            /* Single Column stack */
-            gap: 20px;
+        /* 🏷️ Page Heading & Subtitle */
+        .page-title {
+            text-align: center;
         }
 
+        .page-subtitle {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* 📱 1. MOBILE DEFAULT (1 COLUMN LAYOUT) */
+        /* Base styles apply to mobile devices first without any media queries */
+        .card-container {
+            display: grid; /* ⚙️ Activates CSS Grid layout */
+            grid-template-columns: 1fr; /* 📐 Single column stack (1 fraction unit = 100% width) */
+            gap: 20px; /* ↕️ Equal spacing between grid items */
+        }
+
+        /* 🃏 Card Component Styling */
         .card {
             background: white;
             border-radius: 8px;
-            overflow: hidden;
+            overflow: hidden; /* ✂️ Clips images neatly to match rounded corners */
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .card img {
-            width: 100%;
+            width: 100%; /* 🖼️ Fluid Image: 100% width forces image to scale with the card */
             height: 200px;
-            object-fit: cover;
+            object-fit: cover; /* 🖼️ Crops image proportionally so it fills the 200px height without stretching */
         }
 
         .content {
@@ -36,31 +55,72 @@
             font-size: 1.2rem;
         }
 
-        /* 2. TABLET (2 COLUMNS) - Triggers at 600px */
-        @media (min-width: 600px) {
-            .card-container {
-                grid-template-columns: 1fr 1fr;
-                /* Two Columns */
-            }
-
-            body {
-                background-color: #e3f2fd;
-            }
-
-            /* Visual Hint */
+        /* 💡 Student Explanation Guide Box */
+        .explanation-section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 25px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            line-height: 1.6;
         }
 
-        /* 3. DESKTOP (4 COLUMNS) - Triggers at 900px */
-        @media (min-width: 900px) {
+        .explanation-section h2 {
+            color: #4b3190;
+            border-bottom: 2px solid #fdbb30;
+            padding-bottom: 8px;
+            margin-top: 0;
+        }
+
+        /* 💻 Code Block Boxes inside explanation section */
+        .code-block {
+            background: #272822;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+
+        .code-block-highlight {
+            background: #272822;
+            color: #a6e22e;
+            padding: 12px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+
+        /* =============================================================
+           📲 2. TABLET MEDIA QUERY (600px BREAKPOINT)
+           - Triggers when screen viewport is AT LEAST 600px wide
+           - Overrides the 1-column mobile layout into a 2-column grid
+           ============================================================= */
+        @media (min-width: 600px) {
             .card-container {
-                grid-template-columns: repeat(4, 1fr);
-                /* Four Columns */
+                grid-template-columns: 1fr 1fr; /* 📐 Splits cards into 2 equal columns */
             }
 
             body {
-                background-color: #e8f5e9;
+                background-color: #e3f2fd; /* 🎨 Visual hint: Light blue background on tablets */
+            }
+        }
+
+        /* =============================================================
+           💻 3. DESKTOP MEDIA QUERY (900px BREAKPOINT)
+           - Triggers when screen viewport is AT LEAST 900px wide
+           - Overrides tablet layout into a 4-column row
+           ============================================================= */
+        @media (min-width: 900px) {
+            .card-container {
+                grid-template-columns: repeat(4, 1fr); /* 📐 Expands cards into 4 equal columns */
             }
 
-            /* Visual Hint */
+            body {
+                background-color: #e8f5e9; /* 🎨 Visual hint: Light green background on desktops */
+            }
         }
    

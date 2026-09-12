@@ -3,37 +3,21 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- MANDATORY FOR RESPONSIVE -->
+    <!-- 📱 MANDATORY FOR RESPONSIVE: Viewport meta tag tells mobile browsers not to zoom out or pretend to be a desktop display -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 7 Sample: Responsive</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ================================================
-         INSTRUCTOR NOTES: Sample 07 — Responsive Design
-         Topic: Mobile-first responsive layouts using CSS Grid + media queries
-         Key Concepts: viewport meta tag, mobile-first defaults, @media (min-width),
-                       breakpoints (600px tablet, 900px desktop), fluid images (width: 100%)
-         Pairs with: Week 7 — Media Queries & Responsive Projects
-         ================================================ -->
-    <aside style="font-family: 'Segoe UI', sans-serif; background-color: #4b3190; color: white; padding: 20px; margin-bottom: 30px;">
-        <h2 style="margin: 0 0 8px 0; font-size: 1.2rem; color: #fdbb30;">📘 Sample 07: Responsive Design</h2>
-        <p style="margin: 0 0 6px 0; font-size: 0.9rem;"><strong>Key Concepts:</strong> viewport meta tag, mobile-first defaults, @media (min-width), breakpoints (600px, 900px), fluid images</p>
-        <p style="margin: 0 0 10px 0; font-size: 0.9rem;"><strong>Pairs with:</strong> Week 7 — Media Queries &amp; Responsive Projects</p>
-        <!-- VIDEO PLACEHOLDER -->
-        <div style="background-color: rgba(255,255,255,0.1); border: 2px dashed #fdbb30; border-radius: 6px; padding: 12px; text-align: center;">
-            <strong>[VIDEO PLACEHOLDER]</strong><br/>
-            Sample 07 Walkthrough: Responsive Design — Dr. K<br/>
-            <em style="font-size: 0.85em;">(Replace with Panopto or YouTube iframe embed)</em>
-        </div>
-    </aside>
+    <h1 class="page-title">Responsive Gallery</h1>
+    <p class="page-subtitle">Resize your browser window to see the layout change.</p>
 
-    <h1 style="text-align: center;">Responsive Gallery</h1>
-    <p style="text-align: center; margin-bottom: 30px;">Resize your browser window to see the layout change.</p>
-
+    <!-- 📱 MOBILE-FIRST GRID: This container starts as a single column stack on mobile screens, then expands at 600px and 900px -->
     <div class="card-container">
 
+        <!-- 📱 Item 1: Displays in 1 column on mobile, 2 columns on tablet, 4 columns on desktop -->
         <div class="card">
             <img src="https://placehold.co/400x200/ff7f50/fff?text=Item+1" alt="Item 1">
             <div class="content">
@@ -42,6 +26,7 @@
             </div>
         </div>
 
+        <!-- 📲 Item 2: Moves next to Item 1 at the 600px tablet breakpoint -->
         <div class="card">
             <img src="https://placehold.co/400x200/6495ed/fff?text=Item+2" alt="Item 2">
             <div class="content">
@@ -50,6 +35,7 @@
             </div>
         </div>
 
+        <!-- 💻 Item 3: Expands into a 4-column row at the 900px desktop breakpoint -->
         <div class="card">
             <img src="https://placehold.co/400x200/da70d6/fff?text=Item+3" alt="Item 3">
             <div class="content">
@@ -58,6 +44,7 @@
             </div>
         </div>
 
+        <!-- 💧 Item 4: Fluid design lets all cards resize seamlessly with fraction units (1fr) -->
         <div class="card">
             <img src="https://placehold.co/400x200/3cb371/fff?text=Item+4" alt="Item 4">
             <div class="content">
@@ -67,6 +54,68 @@
         </div>
 
     </div>
+
+    <!-- ================================================
+         📚 STUDENT GUIDE: Media Queries & Responsive Design Explained
+         ================================================ -->
+    <section class="explanation-section">
+        <h2>
+            💡 What Are Media Queries &amp; How Do They Work?
+        </h2>
+
+        <h3>1. The Simple Analogy</h3>
+        <p>
+            Imagine dressing for the weather. If it's hot outside, you wear a t-shirt. If it starts raining, you put on a raincoat. 
+            <strong>Media queries</strong> work the same way for websites! They ask the browser: <em>"How wide is this screen right now?"</em> 
+            Based on the answer, the browser applies different CSS styling rules.
+        </p>
+
+        <h3>2. Why "Mobile-First"?</h3>
+        <p>
+            In modern web development, we usually write CSS <strong>mobile-first</strong>:
+        </p>
+        <ul>
+            <li><strong>Base CSS (Default):</strong> Write styles for mobile screens first (e.g., a simple 1-column layout).</li>
+            <li><strong>Media Queries:</strong> As the screen gets wider (tablets, laptops, desktops), media queries kick in to expand the layout into 2 or 4 columns.</li>
+        </ul>
+
+        <h3>3. Anatomy of a Media Query</h3>
+        <p>Here is what the code looks like in your CSS file:</p>
+        <pre class="code-block"><code>/* 1. Base styles (apply to mobile phones by default) */
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 Column */
+}
+
+/* 2. Tablet view: triggers at 600px width or wider */
+@media (min-width: 600px) {
+    .card-container {
+        grid-template-columns: 1fr 1fr; /* 2 Columns */
+    }
+}
+
+/* 3. Desktop view: triggers at 900px width or wider */
+@media (min-width: 900px) {
+    .card-container {
+        grid-template-columns: repeat(4, 1fr); /* 4 Columns */
+    }
+}</code></pre>
+
+        <h3>4. The Secret Ingredient: Viewport Meta Tag</h3>
+        <p>
+            Media queries won't work on mobile devices without this required line inside your HTML <code>&lt;head&gt;</code>:
+        </p>
+        <pre class="code-block-highlight"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+        <p>
+            Without it, phone browsers pretend to be desktop screens and zoom out, making your site tiny and unreadable!
+        </p>
+
+        <h3>5. How to Test It Yourself</h3>
+        <ul>
+            <li><strong>Resize your window:</strong> Click and drag the corner of your browser window to make it wider or narrower. Notice how the background color changes from grey (mobile) to blue (tablet) to green (desktop)!</li>
+            <li><strong>Use Developer Tools:</strong> Press <kbd>F12</kbd> or right-click &rarr; <em>Inspect</em>, then click the <strong>Device Toolbar icon</strong> (📱) to test specific phone models.</li>
+        </ul>
+    </section>
 
 </body>
 
