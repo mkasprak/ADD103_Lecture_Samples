@@ -1,0 +1,66 @@
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* 1. MOBILE DEFAULT (1 COLUMN) */
+        .card-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            /* Single Column stack */
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .content {
+            padding: 15px;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 1.2rem;
+        }
+
+        /* 2. TABLET (2 COLUMNS) - Triggers at 600px */
+        @media (min-width: 600px) {
+            .card-container {
+                grid-template-columns: 1fr 1fr;
+                /* Two Columns */
+            }
+
+            body {
+                background-color: #e3f2fd;
+            }
+
+            /* Visual Hint */
+        }
+
+        /* 3. DESKTOP (4 COLUMNS) - Triggers at 900px */
+        @media (min-width: 900px) {
+            .card-container {
+                grid-template-columns: repeat(4, 1fr);
+                /* Four Columns */
+            }
+
+            body {
+                background-color: #e8f5e9;
+            }
+
+            /* Visual Hint */
+        }
+   
