@@ -1,9 +1,9 @@
 ﻿/* ===== GLOBAL BODY STYLING ===== */
 body {
-  /* Sets the main typeface to Verdana with sans-serif as fallback */
-  font-family: "Verdana", sans-serif;
-  /* Light cyan background color for the entire page */
-  background-color: #e0f7fa;
+  /* Sets the main typeface to MCC font stack */
+  font-family: 'Segoe UI', 'Open Sans', Arial, sans-serif;
+  /* Light MCC Purple background color for the entire page */
+  background-color: #f4f0fa;
   /* Removes default browser margins */
   margin: 0;
   /* Adds 40px spacing inside the body element */
@@ -14,8 +14,8 @@ body {
 h1 {
   /* Centers the heading text horizontally */
   text-align: center;
-  /* Dark teal color for the heading */
-  color: #006064;
+  /* Primary MCC Purple color for the heading */
+  color: #4b3190;
 }
 
 /* ===== 📦 FLEX CONTAINER (Parent) ===== */
@@ -90,8 +90,8 @@ h1 {
   object-fit: cover;
   /* Adds space below the avatar image */
   margin-bottom: 15px;
-  /* Bright cyan border around the image */
-  border: 4px solid #00bcd4;
+  /* MCC Gold border around the image */
+  border: 4px solid #fdbb30;
 }
 
 /* ===== TEAM MEMBER NAME STYLING ===== */
@@ -100,14 +100,14 @@ h2 {
   margin: 0;
   /* Makes the name slightly larger than normal text (1.2x current size) */
   font-size: 19px;
-  /* Dark gray color for good readability */
-  color: #333;
+  /* MCC Purple color for good readability */
+  color: #4b3190;
 }
 
 /* ===== JOB TITLE/ROLE STYLING ===== */
 .role {
-  /* Cyan color to match the design theme */
-  color: #00bcd4;
+  /* MCC Navy color to match the design theme */
+  color: #002855;
   /* Makes the role text heavier/darker */
   font-weight: bold;
   /* Adds space below the role */

@@ -1,27 +1,33 @@
-/* I'm using on page styles just to see and change them while I work */
+/* Practice Stylesheet aligned with MCC Brand Theme */
 body {
-  background: rgb(240, 232, 186);
-  color: rgb(87, 8, 87);
+  font-family: 'Segoe UI', 'Open Sans', Arial, sans-serif;
+  background-color: #f4f0fa; /* Light MCC Purple tint */
+  color: #4b3190; /* 🏛️ MCC Purple */
 }
 
 h1,
 p {
   text-align: center;
-  color: rgb(87, 9, 87);
+  color: #4b3190; /* 🏛️ MCC Purple */
 }
 .container {
-  background-color: rgb(87, 9, 87);
+  background-color: #4b3190; /* 🏛️ MCC Purple container */
   display: flex;
   min-height: 150px;
   width: 70%;
   margin: 30px auto;
+  border-radius: 8px;
 }
 .flex_div {
-  background: rgb(234, 231, 212);
+  background: #fdbb30; /* 🏆 MCC Gold items */
   margin: 20px 2.5%;
   padding: 10px;
   font-size: 35px;
-  color: rgb(87, 9, 87);
+  color: #002855; /* ⚓ MCC Navy text */
   height: 100px;
   width: 15%;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

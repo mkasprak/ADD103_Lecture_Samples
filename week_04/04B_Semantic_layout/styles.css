@@ -30,23 +30,23 @@
 :root {
     /* :root targets the <html> element — the highest scope, so these variables
        are available to every element on the page */
-    --brand-color: #582c83;
+    --brand-color: #4b3190;
     /* MCC purple */
-    --highlight: #D1A153;
+    --highlight: #fdbb30;
     /* MCC gold */
     --light-text: #ffffff;
     /* white — for text on dark backgrounds */
     --dark-text: #222222;
     /* near-black — easier on the eyes than pure #000 */
-    --font-body: Arial, Helvetica, sans-serif;
-    /* site-wide font stack */
+    --font-body: 'Segoe UI', 'Open Sans', Arial, sans-serif;
+    /* MCC site-wide font stack */
     --gap: 1%;
     /* consistent spacing value */
     --card-radius: 8px;
     /* reusable corner rounding */
     --border-color: #ddd;
     /* muted grey for card borders */
-    --code-bg: #f0eaf7;
+    --code-bg: #f0eaf8;
     /* light purple tint for inline code */
 }
 

@@ -12,9 +12,9 @@
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f9fa;
-  color: #333333;
+  font-family: 'Segoe UI', 'Open Sans', Arial, sans-serif;
+  background-color: #f4f0fa; /* Light MCC Purple tint */
+  color: #222222;
   line-height: 1.6;
   padding: 40px 20px;
   display: flex;
@@ -23,14 +23,14 @@ body {
 }
 
 h1 {
-  color: #582c83;
+  color: #4b3190; /* 🏛️ MCC Purple */
   margin-bottom: 10px;
   font-size: 35px;
   text-align: center;
 }
 
 .subtitle {
-  color: #666666;
+  color: #555555;
   margin-bottom: 40px;
   text-align: center;
   font-size: 18px;
@@ -77,8 +77,8 @@ a {
 
 /* Class Selectors for the specific box */
 .featured-card {
-  border-top: 6px solid #d1a153; /* Gold accent border */
-  background-color: #fdfbf7;
+  border-top: 6px solid #fdbb30; /* 🏆 MCC Gold accent border */
+  background-color: #fffdf5;
 }
 
 /* Class selectors overriding the global p style */
@@ -96,7 +96,7 @@ a {
 /* Class selector to turn a standard link into a button */
 .btn-link {
   display: inline-block;
-  background-color: #582c83; /* Brand Purple */
+  background-color: #4b3190; /* 🏛️ MCC Purple */
   color: #ffffff;
   text-decoration: none;
   padding: 10px 20px;

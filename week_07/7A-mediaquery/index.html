@@ -3,119 +3,212 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- 📱 MANDATORY FOR RESPONSIVE: Viewport meta tag tells mobile browsers not to zoom out or pretend to be a desktop display -->
+    <!-- 📱 MANDATORY FOR RESPONSIVE: Viewport meta tag tells mobile browsers to match screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 7 Sample: Responsive</title>
+    <title>MCC ADD 103 | Media Queries &amp; Responsive Breakpoints</title>
+    <!-- 🎨 MCC Fonts & External Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1 class="page-title">Responsive Gallery</h1>
-    <p class="page-subtitle">Resize your browser window to see the layout change.</p>
-
-    <!-- 📱 MOBILE-FIRST GRID: This container starts as a single column stack on mobile screens, then expands at 600px and 900px -->
-    <div class="card-container">
-
-        <!-- 📱 Item 1: Displays in 1 column on mobile, 2 columns on tablet, 4 columns on desktop -->
-        <div class="card">
-            <img src="https://placehold.co/400x200/ff7f50/fff?text=Item+1" alt="Item 1">
-            <div class="content">
-                <h2>Mobile First</h2>
-                <p>This layout starts as a single column stack.</p>
-            </div>
-        </div>
-
-        <!-- 📲 Item 2: Moves next to Item 1 at the 600px tablet breakpoint -->
-        <div class="card">
-            <img src="https://placehold.co/400x200/6495ed/fff?text=Item+2" alt="Item 2">
-            <div class="content">
-                <h2>Tablet View</h2>
-                <p>At 600px, it splits into two columns.</p>
-            </div>
-        </div>
-
-        <!-- 💻 Item 3: Expands into a 4-column row at the 900px desktop breakpoint -->
-        <div class="card">
-            <img src="https://placehold.co/400x200/da70d6/fff?text=Item+3" alt="Item 3">
-            <div class="content">
-                <h2>Desktop View</h2>
-                <p>At 900px, it expands to four columns.</p>
-            </div>
-        </div>
-
-        <!-- 💧 Item 4: Fluid design lets all cards resize seamlessly with fraction units (1fr) -->
-        <div class="card">
-            <img src="https://placehold.co/400x200/3cb371/fff?text=Item+4" alt="Item 4">
-            <div class="content">
-                <h2>Fluid Design</h2>
-                <p>The grid adapts to the available space.</p>
-            </div>
-        </div>
-
+    <!-- 📏 LIVE PIXEL WIDTH INDICATOR BADGE (Fixed in top left corner) -->
+    <div class="width-indicator-badge">
+        📏 Width: <span id="viewport-width">---</span>px
     </div>
 
-    <!-- ================================================
-         📚 STUDENT GUIDE: Media Queries & Responsive Design Explained
-         ================================================ -->
-    <section class="explanation-section">
-        <h2>
-            💡 What Are Media Queries &amp; How Do They Work?
-        </h2>
+    <!-- 🎓 MCC BRAND HEADER -->
+    <header class="mcc-header">
+        <div class="mcc-header-content">
+            <span class="mcc-badge">McHenry County College — ADD 103</span>
+            <h1>📱 Responsive Design &amp; Media Queries</h1>
+            <p>Learn how CSS media queries adapt layout, background color, and text visibility across 3 main breakpoints!</p>
+        </div>
+    </header>
 
-        <h3>1. The Simple Analogy</h3>
-        <p>
-            Imagine dressing for the weather. If it's hot outside, you wear a t-shirt. If it starts raining, you put on a raincoat. 
-            <strong>Media queries</strong> work the same way for websites! They ask the browser: <em>"How wide is this screen right now?"</em> 
-            Based on the answer, the browser applies different CSS styling rules.
-        </p>
+    <main class="container">
 
-        <h3>2. Why "Mobile-First"?</h3>
-        <p>
-            In modern web development, we usually write CSS <strong>mobile-first</strong>:
-        </p>
-        <ul>
-            <li><strong>Base CSS (Default):</strong> Write styles for mobile screens first (e.g., a simple 1-column layout).</li>
-            <li><strong>Media Queries:</strong> As the screen gets wider (tablets, laptops, desktops), media queries kick in to expand the layout into 2 or 4 columns.</li>
-        </ul>
+        <!-- 🎯 ACTIVE BREAKPOINT INDICATOR BOXES -->
+        <!-- These 3 cards use visibility classes (.show-mobile, .show-tablet, .show-desktop).
+             Only ONE is visible at a time based on the active browser width! -->
+        <section class="breakpoint-display">
 
-        <h3>3. Anatomy of a Media Query</h3>
-        <p>Here is what the code looks like in your CSS file:</p>
-        <pre class="code-block"><code>/* 1. Base styles (apply to mobile phones by default) */
-.card-container {
-    display: grid;
-    grid-template-columns: 1fr; /* 1 Column */
+            <!-- 📱 MOBILE BREAKPOINT INDICATOR (Active under 600px) -->
+            <div class="breakpoint-card show-mobile">
+                <div class="card-badge mobile-badge">📱 ACTIVE VIEW: Cell Phone (&lt; 600px)</div>
+                <h2>Mobile-First Layout</h2>
+                <p>You are viewing this page on a <strong>Mobile Screen</strong> (under 600px wide).</p>
+                <ul>
+                    <li>🎨 <strong>Background Color:</strong> Light MCC Lavender (<code>#f4f0fa</code>)</li>
+                    <li>📐 <strong>Layout:</strong> 1-Column vertical stack</li>
+                    <li>👀 <strong>Visibility:</strong> <code>.show-mobile</code> is <code>display: block</code>; tablet &amp; desktop cards are <code>display: none</code>.</li>
+                </ul>
+            </div>
+
+            <!-- 📲 TABLET BREAKPOINT INDICATOR (Active 600px - 899px) -->
+            <div class="breakpoint-card show-tablet">
+                <div class="card-badge tablet-badge">📲 ACTIVE VIEW: Tablet Screen (600px – 899px)</div>
+                <h2>Tablet Layout</h2>
+                <p>You resized your browser to a <strong>Tablet Screen</strong> (between 600px and 899px).</p>
+                <ul>
+                    <li>🎨 <strong>Background Color:</strong> Light Sky Blue (<code>#e3f2fd</code>)</li>
+                    <li>📐 <strong>Layout:</strong> 2-Column grid</li>
+                    <li>👀 <strong>Visibility:</strong> <code>.show-tablet</code> is <code>display: block</code>; mobile &amp; desktop cards are <code>display: none</code>.</li>
+                </ul>
+            </div>
+
+            <!-- 💻 DESKTOP BREAKPOINT INDICATOR (Active 900px+) -->
+            <div class="breakpoint-card show-desktop">
+                <div class="card-badge desktop-badge">💻 ACTIVE VIEW: Full-Size Computer (900px+)</div>
+                <h2>Desktop / Computer Layout</h2>
+                <p>You are viewing this page on a <strong>Desktop / Laptop Screen</strong> (900px wide or larger).</p>
+                <ul>
+                    <li>🎨 <strong>Background Color:</strong> Light MCC Gold Tint (<code>#fff8e1</code>)</li>
+                    <li>📐 <strong>Layout:</strong> 4-Column wide grid</li>
+                    <li>👀 <strong>Visibility:</strong> <code>.show-desktop</code> is <code>display: block</code>; mobile &amp; tablet cards are <code>display: none</code>.</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <!-- 🖼️ RESPONSIVE DEMO GALLERY -->
+        <!-- Demonstrates 1 column on mobile, 2 columns on tablet, 4 columns on desktop -->
+        <section class="gallery-section">
+            <h2>🖼️ Responsive Sample Cards</h2>
+            <p class="subtitle">Notice how these cards arrange themselves into 1, 2, or 4 columns based on screen width!</p>
+
+            <div class="card-container">
+                <!-- 📱 Card 1 -->
+                <div class="card">
+                    <img src="https://placehold.co/400x200/4b3190/ffffff?text=1.+Mobile+Stack" alt="Mobile Stack">
+                    <div class="content">
+                        <h3>1 Column Default</h3>
+                        <p>Starts as a single stack on mobile devices.</p>
+                    </div>
+                </div>
+
+                <!-- 📲 Card 2 -->
+                <div class="card">
+                    <img src="https://placehold.co/400x200/002855/ffffff?text=2.+Tablet+Grid" alt="Tablet Grid">
+                    <div class="content">
+                        <h3>2 Columns @ 600px</h3>
+                        <p>Splits into a 2-column grid on tablets.</p>
+                    </div>
+                </div>
+
+                <!-- 💻 Card 3 -->
+                <div class="card">
+                    <img src="https://placehold.co/400x200/fdbb30/000000?text=3.+Desktop+Row" alt="Desktop Row">
+                    <div class="content">
+                        <h3>4 Columns @ 900px</h3>
+                        <p>Expands across 4 columns on desktop monitors.</p>
+                    </div>
+                </div>
+
+                <!-- 💧 Card 4 -->
+                <div class="card">
+                    <img src="https://placehold.co/400x200/2e7d32/ffffff?text=4.+Fluid+Grid" alt="Fluid Grid">
+                    <div class="content">
+                        <h3>Fluid Sizing</h3>
+                        <p>Fraction units (1fr) adapt smoothly as width changes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 📚 STUDENT EXPLANATION SECTION -->
+        <section class="explanation-section">
+            <h2>💡 How Media Queries &amp; Visibility Classes Work</h2>
+
+            <h3>1. What is a Media Query?</h3>
+            <p>
+                A <strong>media query</strong> is a CSS rule that tests browser conditions—most commonly screen width—and applies CSS styles only when those conditions are met. Think of it like a smart switchboard for your website!
+            </p>
+
+            <h3>2. The 3 Standard Breakpoints</h3>
+            <ul>
+                <li><strong>📱 Mobile (&lt; 600px):</strong> Default base styles (no media query needed for Mobile-First!).</li>
+                <li><strong>📲 Tablet (600px – 899px):</strong> Triggered by <code>@media (min-width: 600px)</code>.</li>
+                <li><strong>💻 Desktop (900px+):</strong> Triggered by <code>@media (min-width: 900px)</code>.</li>
+            </ul>
+
+            <h3>3. How Background Colors Change Across Breakpoints</h3>
+            <p>We change the <code>background-color</code> of the <code>body</code> element inside each breakpoint's media query block:</p>
+            <pre class="code-block"><code>/* 📱 Mobile default background */
+body {
+    background-color: #f4f0fa;
 }
 
-/* 2. Tablet view: triggers at 600px width or wider */
+/* 📲 Tablet background at 600px */
 @media (min-width: 600px) {
-    .card-container {
-        grid-template-columns: 1fr 1fr; /* 2 Columns */
+    body {
+        background-color: #e3f2fd;
     }
 }
 
-/* 3. Desktop view: triggers at 900px width or wider */
+/* 💻 Desktop background at 900px */
 @media (min-width: 900px) {
-    .card-container {
-        grid-template-columns: repeat(4, 1fr); /* 4 Columns */
+    body {
+        background-color: #fff8e1;
     }
 }</code></pre>
 
-        <h3>4. The Secret Ingredient: Viewport Meta Tag</h3>
-        <p>
-            Media queries won't work on mobile devices without this required line inside your HTML <code>&lt;head&gt;</code>:
-        </p>
-        <pre class="code-block-highlight"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
-        <p>
-            Without it, phone browsers pretend to be desktop screens and zoom out, making your site tiny and unreadable!
-        </p>
+            <h3>4. How We Show/Hide Text at Specific Breakpoints</h3>
+            <p>
+                To show text <em>only</em> at a specific breakpoint and turn it invisible everywhere else, we combine <code>display: none</code> and <code>display: block</code>:
+            </p>
+            <ol>
+                <li><strong>Start by hiding non-mobile classes:</strong> On mobile default, set <code>.show-tablet</code> and <code>.show-desktop</code> to <code>display: none</code>, and set <code>.show-mobile</code> to <code>display: block</code>.</li>
+                <li><strong>Switch visibility in Tablet Media Query (600px):</strong> Hide <code>.show-mobile</code> and <code>.show-desktop</code> (<code>display: none</code>), and show <code>.show-tablet</code> (<code>display: block</code>).</li>
+                <li><strong>Switch visibility in Desktop Media Query (900px):</strong> Hide <code>.show-mobile</code> and <code>.show-tablet</code> (<code>display: none</code>), and show <code>.show-desktop</code> (<code>display: block</code>).</li>
+            </ol>
 
-        <h3>5. How to Test It Yourself</h3>
-        <ul>
-            <li><strong>Resize your window:</strong> Click and drag the corner of your browser window to make it wider or narrower. Notice how the background color changes from grey (mobile) to blue (tablet) to green (desktop)!</li>
-            <li><strong>Use Developer Tools:</strong> Press <kbd>F12</kbd> or right-click &rarr; <em>Inspect</em>, then click the <strong>Device Toolbar icon</strong> (📱) to test specific phone models.</li>
-        </ul>
-    </section>
+            <pre class="code-block"><code>/* 📱 Mobile Default */
+.show-mobile { display: block; }
+.show-tablet { display: none; }
+.show-desktop { display: none; }
+
+/* 📲 Tablet View (600px+) */
+@media (min-width: 600px) {
+    .show-mobile { display: none; }
+    .show-tablet { display: block; }
+    .show-desktop { display: none; }
+}
+
+/* 💻 Desktop View (900px+) */
+@media (min-width: 900px) {
+    .show-mobile { display: none; }
+    .show-tablet { display: none; }
+    .show-desktop { display: block; }
+}</code></pre>
+
+            <h3>5. Testing Your Breakpoints</h3>
+            <p>
+                Try resizing your browser window right now! Watch the top card change text, watch the page background color shift, and watch the gallery cards re-arrange from 1 &rarr; 2 &rarr; 4 columns!
+            </p>
+        </section>
+
+    </main>
+
+    <!-- 🎓 MCC FOOTER -->
+    <footer class="mcc-footer">
+        <p>McHenry County College • ADD 103 Web Development</p>
+        <p><a href="../../index.html">🏚️ Course Home Page</a></p>
+    </footer>
+
+    <!-- 📏 LIVE PIXEL WIDTH INDICATOR SCRIPT
+         Updates the top-left width badge dynamically whenever the browser window is resized -->
+    <script>
+        function updateViewportWidth() {
+            const widthSpan = document.getElementById('viewport-width');
+            if (widthSpan) {
+                widthSpan.textContent = window.innerWidth;
+            }
+        }
+        // Update immediately on page load and whenever window resizes
+        window.addEventListener('resize', updateViewportWidth);
+        updateViewportWidth();
+    </script>
 
 </body>
 
