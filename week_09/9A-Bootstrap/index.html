@@ -90,9 +90,15 @@
                 <h2 class="text-purple border-bottom border-warning border-3 pb-2 mb-2">
                     🖼️ Guided Project Sample: National Parks Photo Album
                 </h2>
-                <p class="text-muted mb-4">
+                <p class="text-muted mb-3">
                     A 6-card grid layout built with <code>.container</code> and <code>.row</code>. Each card scales from 1 column on mobile (<code>col-12</code>) to 2 columns on tablet (<code>col-md-6</code>) and 3 columns on desktop (<code>col-lg-4</code>).
                 </p>
+
+                <!-- 📜 ACADEMIC INTEGRITY & IMAGE LICENSING CALLOUT -->
+                <div class="alert alert-warning border-start border-warning border-4 mb-4 small">
+                    <strong>⚖️ Modeling Academic Integrity &amp; Image Attribution:</strong><br>
+                    All images in this sample are sourced from <strong>Wikimedia Commons / U.S. National Park Service (NPS)</strong> and published under <strong>Public Domain</strong> or <strong>Creative Commons (CC BY-SA 3.0)</strong> licenses. Each image is wrapped in a semantic <code>&lt;figure&gt;</code> element with a <code>&lt;figcaption&gt;</code> crediting the photographer and linking directly back to the original source.
+                </div>
 
                 <!-- 🖼️ PHOTO ALBUM GRID ROW -->
                 <!-- .row activates Flexbox grid; g-4 adds equal gap spacing between cards -->
@@ -101,10 +107,15 @@
                     <!-- 🌄 CARD 1: YOSEMITE -->
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="card h-100 shadow-sm border-0 bg-light">
-                            <!-- img-fluid makes image responsive; border & rounded add styling -->
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Tunnel_View%2C_Yosemite_NP%2C_CA%2C_US_-_Diliff.jpg/600px-Tunnel_View%2C_Yosemite_NP%2C_CA%2C_US_-_Diliff.jpg" 
-                                 class="card-img-top img-fluid rounded-top album-img" 
-                                 alt="Yosemite National Park">
+                            <!-- <figure> & <figcaption> wrap images to credit sources with academic integrity -->
+                            <figure class="m-0">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Tunnel_View%2C_Yosemite_NP%2C_CA%2C_US_-_Diliff.jpg/600px-Tunnel_View%2C_Yosemite_NP%2C_CA%2C_US_-_Diliff.jpg" 
+                                     class="card-img-top img-fluid rounded-top album-img" 
+                                     alt="Yosemite National Park">
+                                <figcaption class="figure-caption text-end px-2 py-1 bg-dark text-light small opacity-75">
+                                    Photo: David Iliff (<a href="https://commons.wikimedia.org/wiki/File:Tunnel_View,_Yosemite_NP,_CA,_US_-_Diliff.jpg" target="_blank" class="text-warning text-decoration-underline">Wikimedia CC BY-SA 3.0</a>)
+                                </figcaption>
+                            </figure>
                             <div class="card-body">
                                 <h3 class="h5 text-purple mb-2">Yosemite Valley</h3>
                                 <p class="card-text text-secondary small">
@@ -117,9 +128,14 @@
                     <!-- 🏔️ CARD 2: YELLOWSTONE -->
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="card h-100 shadow-sm border-0 bg-light">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Grand_Prismatic_Spring_and_Midway_Geyser_Basin_from_above.jpg/600px-Grand_Prismatic_Spring_and_Midway_Geyser_Basin_from_above.jpg" 
-                                 class="card-img-top img-fluid rounded-top album-img" 
-                                 alt="Yellowstone National Park">
+                            <figure class="m-0">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Grand_Prismatic_Spring_and_Midway_Geyser_Basin_from_above.jpg/600px-Grand_Prismatic_Spring_and_Midway_Geyser_Basin_from_above.jpg" 
+                                     class="card-img-top img-fluid rounded-top album-img" 
+                                     alt="Yellowstone National Park">
+                                <figcaption class="figure-caption text-end px-2 py-1 bg-dark text-light small opacity-75">
+                                    Photo: Jim Peaco / NPS (<a href="https://commons.wikimedia.org/wiki/File:Grand_Prismatic_Spring_and_Midway_Geyser_Basin_from_above.jpg" target="_blank" class="text-warning text-decoration-underline">Public Domain / NPS</a>)
+                                </figcaption>
+                            </figure>
                             <div class="card-body">
                                 <h3 class="h5 text-purple mb-2">Yellowstone Geysers</h3>
                                 <p class="card-text text-secondary small">
@@ -132,9 +148,14 @@
                     <!-- 🏜️ CARD 3: ZION -->
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="card h-100 shadow-sm border-0 bg-light">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Zion_canyon_1.jpg/600px-Zion_canyon_1.jpg" 
-                                 class="card-img-top img-fluid rounded-top album-img" 
-                                 alt="Zion National Park">
+                            <figure class="m-0">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Zion_canyon_1.jpg/600px-Zion_canyon_1.jpg" 
+                                     class="card-img-top img-fluid rounded-top album-img" 
+                                     alt="Zion National Park">
+                                <figcaption class="figure-caption text-end px-2 py-1 bg-dark text-light small opacity-75">
+                                    Photo: Diliff (<a href="https://commons.wikimedia.org/wiki/File:Zion_canyon_1.jpg" target="_blank" class="text-warning text-decoration-underline">Wikimedia CC BY-SA 3.0</a>)
+                                </figcaption>
+                            </figure>
                             <div class="card-body">
                                 <h3 class="h5 text-purple mb-2">Zion Canyon</h3>
                                 <p class="card-text text-secondary small">
@@ -147,9 +168,14 @@
                     <!-- 🌲 CARD 4: GRAND TETON -->
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="card h-100 shadow-sm border-0 bg-light">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Grand_Teton_NP_-_Snake_River_Overlook.jpg/600px-Grand_Teton_NP_-_Snake_River_Overlook.jpg" 
-                                 class="card-img-top img-fluid rounded-top album-img" 
-                                 alt="Grand Teton National Park">
+                            <figure class="m-0">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Grand_Teton_NP_-_Snake_River_Overlook.jpg/600px-Grand_Teton_NP_-_Snake_River_Overlook.jpg" 
+                                     class="card-img-top img-fluid rounded-top album-img" 
+                                     alt="Grand Teton National Park">
+                                <figcaption class="figure-caption text-end px-2 py-1 bg-dark text-light small opacity-75">
+                                    Photo: Ansel Adams / NPS (<a href="https://commons.wikimedia.org/wiki/File:Grand_Teton_NP_-_Snake_River_Overlook.jpg" target="_blank" class="text-warning text-decoration-underline">Public Domain / NPS</a>)
+                                </figcaption>
+                            </figure>
                             <div class="card-body">
                                 <h3 class="h5 text-purple mb-2">Grand Teton Peaks</h3>
                                 <p class="card-text text-secondary small">
@@ -162,9 +188,14 @@
                     <!-- 🌌 CARD 5: BRYCE CANYON -->
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="card h-100 shadow-sm border-0 bg-light">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Bryce_Canyon_National_Park_Hoodoos_by_G_Thomas.jpg/600px-Bryce_Canyon_National_Park_Hoodoos_by_G_Thomas.jpg" 
-                                 class="card-img-top img-fluid rounded-top album-img" 
-                                 alt="Bryce Canyon National Park">
+                            <figure class="m-0">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Bryce_Canyon_National_Park_Hoodoos_by_G_Thomas.jpg/600px-Bryce_Canyon_National_Park_Hoodoos_by_G_Thomas.jpg" 
+                                     class="card-img-top img-fluid rounded-top album-img" 
+                                     alt="Bryce Canyon National Park">
+                                <figcaption class="figure-caption text-end px-2 py-1 bg-dark text-light small opacity-75">
+                                    Photo: G. Thomas (<a href="https://commons.wikimedia.org/wiki/File:Bryce_Canyon_National_Park_Hoodoos_by_G_Thomas.jpg" target="_blank" class="text-warning text-decoration-underline">Public Domain / Wikimedia</a>)
+                                </figcaption>
+                            </figure>
                             <div class="card-body">
                                 <h3 class="h5 text-purple mb-2">Bryce Canyon Hoodoos</h3>
                                 <p class="card-text text-secondary small">
@@ -177,9 +208,14 @@
                     <!-- 🌅 CARD 6: ACADIA -->
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="card h-100 shadow-sm border-0 bg-light">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Bass_Harbor_Head_Light_State_Park_Maine.jpg/600px-Bass_Harbor_Head_Light_State_Park_Maine.jpg" 
-                                 class="card-img-top img-fluid rounded-top album-img" 
-                                 alt="Acadia National Park">
+                            <figure class="m-0">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Bass_Harbor_Head_Light_State_Park_Maine.jpg/600px-Bass_Harbor_Head_Light_State_Park_Maine.jpg" 
+                                     class="card-img-top img-fluid rounded-top album-img" 
+                                     alt="Acadia National Park">
+                                <figcaption class="figure-caption text-end px-2 py-1 bg-dark text-light small opacity-75">
+                                    Photo: NPS (<a href="https://commons.wikimedia.org/wiki/File:Bass_Harbor_Head_Light_State_Park_Maine.jpg" target="_blank" class="text-warning text-decoration-underline">Public Domain / NPS</a>)
+                                </figcaption>
+                            </figure>
                             <div class="card-body">
                                 <h3 class="h5 text-purple mb-2">Acadia Coastline</h3>
                                 <p class="card-text text-secondary small">
