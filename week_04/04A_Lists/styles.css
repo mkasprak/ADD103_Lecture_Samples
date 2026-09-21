@@ -1,0 +1,59 @@
+/* ==========================================
+   BASE STYLES
+   ========================================== */
+
+body {
+    font-family: 'Segoe UI', 'Open Sans', Arial, sans-serif;
+    background-color: #f4f0fa; /* Light MCC Purple tint */
+    color: #222222;
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+h1 {
+    color: #4b3190; /* 🏛️ MCC Purple */
+    border-bottom: 3px solid #fdbb30; /* 🏆 MCC Gold */
+    padding-bottom: 8px;
+}
+
+h2, h3 {
+    color: #002855; /* ⚓ MCC Navy */
+}
+
+a {
+    color: #4b3190;
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   LIST STYLES
+   ol and ul each have a default marker style
+   that CSS can override with list-style-type.
+   ========================================== */
+
+/* Targets all <ol> elements (top-level and nested) */
+ol {
+    font-weight: bold;
+}
+
+/* Descendant selector: targets <ol> only when nested INSIDE another <ol> */
+/* This changes only the sub-list markers without affecting the outer list */
+ol ol {
+    list-style-type: lower-alpha;
+    /* changes sub-list markers to a, b, c... */
+}
+
+/* Targets all <ul> elements */
+ul {
+    list-style-type: circle;
+    /* hollow circle instead of the default filled bullet */
+}
+
+/* Descendant selector: targets <ul> only when nested INSIDE another <ul> */
+ul ul {
+    list-style-type: square;
+    /* filled square for the second-level bullet */
+}

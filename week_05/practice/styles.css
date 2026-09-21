@@ -1,0 +1,33 @@
+/* Practice Stylesheet aligned with MCC Brand Theme */
+body {
+  font-family: 'Segoe UI', 'Open Sans', Arial, sans-serif;
+  background-color: #f4f0fa; /* Light MCC Purple tint */
+  color: #4b3190; /* 🏛️ MCC Purple */
+}
+
+h1,
+p {
+  text-align: center;
+  color: #4b3190; /* 🏛️ MCC Purple */
+}
+.container {
+  background-color: #4b3190; /* 🏛️ MCC Purple container */
+  display: flex;
+  min-height: 150px;
+  width: 70%;
+  margin: 30px auto;
+  border-radius: 8px;
+}
+.flex_div {
+  background: #fdbb30; /* 🏆 MCC Gold items */
+  margin: 20px 2.5%;
+  padding: 10px;
+  font-size: 35px;
+  color: #002855; /* ⚓ MCC Navy text */
+  height: 100px;
+  width: 15%;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

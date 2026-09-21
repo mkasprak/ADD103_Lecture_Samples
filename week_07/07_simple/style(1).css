@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: ivory;
+  color: green;
+}
+
+header {
+  background: green;
+  color: ivory;
+}
+
+.photo-wall {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 90%;
+  margin: 20px auto;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 12px;
+  border-radius: 20%;
+  background: green;
+}
+/* 📦 display: flex turns the hero into a flex row. */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  margin-bottom: 30px;
+}
+
+/* 🧩 These are the two hero flex items. flex-basis sets their starting width. */
+.hero-text,
+.hero-image {
+  flex-basis: 50%;
+  flex-grow: 1;
+  padding: 20px;
+  border: none;
+  background: rgba(0, 0, 0, 0);
+  text-align: center;
+}
+
+.hero-image image {
+  max-width: 400px;
+}
+
+footer {
+  text-align: center;
+  margin: 20px;
+  color: green;
+}

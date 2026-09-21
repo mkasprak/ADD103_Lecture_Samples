@@ -1,0 +1,160 @@
+/* =============================================================
+   🏛️ McHenry County College (MCC) Brand Theme & Stylesheet
+   ADD 103 — Web Development: Week 8 Midterm Showcase
+   ============================================================= */
+
+body {
+    font-family: 'Segoe UI', 'Open Sans', Arial, sans-serif;
+    background-color: #f4f0fa; /* Light MCC Purple tint */
+    color: #222222;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* 🏛️ Header Banner */
+.mcc-header {
+    background-color: #4b3190; /* 🏛️ Primary MCC Purple */
+    color: #ffffff;
+    padding: 35px 20px;
+    border-bottom: 5px solid #fdbb30; /* 🏆 Primary MCC Gold accent border */
+    text-align: center;
+}
+
+.mcc-badge {
+    background-color: #fdbb30; /* 🏆 Gold badge */
+    color: #002855; /* ⚓ Dark Navy text */
+    font-weight: bold;
+    font-size: 0.85rem;
+    padding: 4px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.mcc-header h1 {
+    margin: 5px 0 10px 0;
+    font-size: 2.2rem;
+    color: #ffffff;
+}
+
+.mcc-header p {
+    margin: 0 auto;
+    max-width: 700px;
+    font-size: 1.1rem;
+    color: #f0eaf8;
+}
+
+/* 📦 Main Container */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* 📌 Announcement Card */
+.info-card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 25px 30px;
+    margin-bottom: 35px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-left: 6px solid #fdbb30; /* 🏆 Gold accent border */
+}
+
+.card-badge {
+    display: inline-block;
+    background-color: #4b3190; /* MCC Purple */
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+
+.info-card h2 {
+    margin-top: 0;
+    color: #4b3190; /* MCC Purple */
+    font-size: 1.5rem;
+}
+
+.info-card p {
+    font-size: 1.05rem;
+    color: #333333;
+    margin-bottom: 0;
+}
+
+/* 🎉 Agenda Section */
+.agenda-section h2 {
+    color: #002855; /* ⚓ MCC Navy */
+    border-bottom: 3px solid #fdbb30;
+    padding-bottom: 8px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.agenda-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* 📲 Tablet & Desktop Media Queries */
+@media (min-width: 600px) {
+    .agenda-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.agenda-card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border-top: 4px solid #4b3190; /* MCC Purple */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.agenda-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.agenda-card .icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.agenda-card h3 {
+    margin: 0 0 10px 0;
+    color: #4b3190;
+    font-size: 1.2rem;
+}
+
+.agenda-card p {
+    margin: 0;
+    color: #555555;
+    font-size: 0.95rem;
+}
+
+/* 🎓 Footer */
+.mcc-footer {
+    background-color: #002855; /* ⚓ MCC Navy */
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+.mcc-footer a {
+    color: #fdbb30; /* 🏆 MCC Gold link */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.mcc-footer a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,98 @@
+﻿
+        body {
+            font-family: 'Segoe UI', 'Open Sans', Arial, sans-serif;
+            background-color: #f4f0fa; /* Light MCC Purple tint */
+            color: #222222;
+            max-width: 950px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 4px solid #fdbb30; /* 🏆 MCC Gold border */
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin: 10px 0;
+            text-transform: uppercase;
+            color: #4b3190; /* 🏛️ Primary MCC Purple */
+        }
+
+        .date {
+            font-weight: bold;
+            color: #002855; /* ⚓ MCC Navy */
+            margin-bottom: 10px;
+        }
+
+        /* 🕸️ Grid parent: turns direct children into grid items */
+        .newspaper-grid {
+            /* ⚙️ display: grid activates CSS Grid layout */
+            display: grid;
+
+            /* 📐 repeat(4, 1fr) = 4 equal columns using fraction units */
+            grid-template-columns: repeat(4, 1fr);
+
+            /* ↕️ Rows auto-size based on content unless explicitly defined */
+            gap: 20px;
+            /* 🧭 gap adds space between both rows and columns */
+        }
+
+        /* 🧱 Shared card styling for every grid item */
+        .article {
+            background: white;
+            padding: 15px;
+            border: 1px solid #eee;
+        }
+
+        /* 📏 Spanning logic: control how many columns each item consumes */
+
+        .hero-story {
+            grid-column: span 4;
+            /* 📰 Full width across all 4 columns */
+            border-bottom: 2px solid #333;
+        }
+
+        .hero-story h2 {
+            font-size: 2rem;
+        }
+
+        .hero-story img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .side-story {
+            grid-column: span 1;
+            /* 📌 Single-column sidebar */
+            background-color: #f0f0f0;
+        }
+
+        .main-story {
+            grid-column: span 2;
+            /* ⭐ Center story spans two columns */
+        }
+
+        .opinion-piece {
+            grid-column: span 1;
+            /* 🗨️ Single-column opinion rail */
+            border-left: 2px solid #333;
+        }
+
+        .footer-ad {
+            grid-column: span 4;
+            /* 📢 Full-width banner at the bottom */
+            background-color: #002855; /* ⚓ MCC Navy */
+            color: #fdbb30; /* 🏆 MCC Gold text */
+            text-align: center;
+            padding: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }

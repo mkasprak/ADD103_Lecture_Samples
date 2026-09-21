@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!-- 📱 RESPONSIVE META TAG: This tells the browser to use the device width as the screen width. It is required for mobile-friendly layouts. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+
+    <!-- 🚀 BOOTSTRAP CSS: This loads the Bootstrap framework so we can use classes like container, row, col, card, and text-light. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- 🎨 CUSTOM STYLES: This file adds extra styling beyond Bootstrap defaults. -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 📦 CONTAINER: A centered wrapper that keeps content inside a max-width area. This example uses a fixed-width layout. -->
+    <div class="container bg-primary">
+        <h2 class="text-light">Container</h2>
+
+        <!-- 🧱 ROW: A horizontal row used to organize columns. Bootstrap rows use Flexbox under the hood. -->
+        <div class="row">
+            <!-- 📐 col-12 col-md-4 col-lg-6: On mobile, each card uses the full width. At md and lg sizes, the layout changes. -->
+            <div class="col-12 col-md-4 col-lg-6 px-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">
+                            Title
+                        </h3>
+                        <p class="card-text">
+                            Card Text
+                        </p>
+                        <a href="#" class = "btn btn-primary">Empty Link</a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-8 col-lg-6 px-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">
+                            Title
+                        </h3>
+                        <p class="card-text">
+                            Card Text
+                        </p>
+                        <a href="#" class = "btn btn-primary">Empty Link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 🧮 SECOND ROW: We are changing the column widths again to show how Bootstrap columns respond to screen size. -->
+        <div class="row">
+            <div class="col-12 col-md-4 col-lg-6 px-4">
+                <div class="card">
+                    <div class="card-body"><h3 class="card-title">
+                        Title
+                    </h3>
+                    <p class="card-text">
+                        Card Text
+                    </p>
+                    <a href="#" class = "btn btn-primary">Empty Link</a></div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 col-lg-6 px-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">
+                            Title
+                        </h3>
+                        <p class="card-text">
+                            Card Text
+                        </p>
+                        <a href="#" class = "btn btn-primary">Empty Link</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 col-lg-12 px-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">
+                            Title
+                        </h3>
+                        <p class="card-text">
+                            Card Text
+                        </p>
+                        <a href="#" class = "btn btn-primary">Empty Link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🌊 CONTAINER-FLUID: This fills the full width of the viewport instead of staying inside a centered max-width container. -->
+    <div class="container-fluid bg-success">
+        <h2 class="text-light">Container Fluid</h2>
+
+        <!-- 📏 CARD COLUMNS: The .col class lets each card share the row space automatically. -->
+        <div class="row">
+            <div class="card col">
+                <div class="card-body">
+                    <h3 class="card-title">
+                        Title
+                    </h3>
+                    <p class="card-text">
+                        Card Text
+                    </p>
+                    <a href="#" class = "btn btn-primary">Empty Link</a>
+                </div>
+            </div>
+            <div class="card col">
+                <div class="card-body">
+                    <h3 class="card-title">
+                        Title
+                    </h3>
+                    <p class="card-text">
+                        Card Text
+                    </p>
+                    <a href="#" class = "btn btn-primary">Empty Link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ⚙️ BOOTSTRAP JAVASCRIPT: Needed for Bootstrap components like dropdowns, modals, carousels, and other interactive features. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+
+</html>

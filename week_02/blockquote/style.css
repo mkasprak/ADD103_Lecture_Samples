@@ -1,0 +1,35 @@
+body {
+    font-family: 'Segoe UI', 'Open Sans', Arial, sans-serif;
+    background-color: #f4f0fa;
+    color: #222222;
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #4b3190; /* 🏛️ MCC Purple */
+    border-bottom: 3px solid #fdbb30; /* 🏆 MCC Gold */
+    padding-bottom: 8px;
+}
+
+blockquote {
+    padding: 20px 40px;
+    background-color: #002855; /* ⚓ MCC Navy */
+    color: #ffffff;
+    border-left: 6px solid #fdbb30; /* 🏆 MCC Gold */
+    border-radius: 6px;
+    margin: 20px auto;
+}
+
+a {
+    color: #4b3190;
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 40px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+    font-size: 0.9rem;
+}

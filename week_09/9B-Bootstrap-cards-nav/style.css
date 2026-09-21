@@ -1,0 +1,27 @@
+/* =============================================================
+   🌑 Basic Bootstrap Demo Styles
+   These styles are intentionally simple so students can focus on
+   how Bootstrap layout classes work in the HTML.
+   ============================================================= */
+
+/* 🖤 Body background: This gives the page a dark background so the cards stand out clearly. */
+body {
+  background: black;
+}
+
+/* 🃏 Card spacing: We add margin to each card so there is space between them in the row. */
+.card {
+  margin: 10px 10px;
+}
+
+/* 📦 Container spacing: These two Bootstrap layout wrappers get a little margin so they do not sit flush against the edges of the page. */
+.container,
+.container-fluid {
+  margin: 10px auto;
+}
+
+/* 📝 Heading alignment: This centers the text inside the main headings to make the page easier to read. */
+h1,
+h2 {
+  text-align: center;
+}

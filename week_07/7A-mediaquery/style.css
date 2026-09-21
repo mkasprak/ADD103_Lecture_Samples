@@ -1,0 +1,342 @@
+
+        /* =============================================================
+           🏛️ McHenry County College (MCC) Brand Theme & Stylesheet
+           ADD 103 — Web Development Sample 07A: Media Queries
+           -------------------------------------------------------------
+           🎨 MCC Brand Palette:
+           - MCC Purple: #4b3190
+           - MCC Gold:   #fdbb30
+           - MCC Navy:   #002855
+           - Fonts:      'Segoe UI', 'Open Sans', Arial, sans-serif
+           ============================================================= */
+
+        /* 📱 1. BASE / MOBILE-FIRST STYLES (Applies to all screen sizes & mobile phones < 600px) */
+
+        body {
+            font-family: 'Segoe UI', 'Open Sans', Arial, sans-serif;
+            background-color: #f4f0fa; /* 📱 Mobile default background color: Light MCC Purple tint */
+            color: #222222;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            transition: background-color 0.4s ease; /* 🎨 Smooth background color transition when resizing window */
+        }
+
+        /* 📏 STICKY/FIXED LIVE PIXEL WIDTH BADGE (Fixed in Top-Left Corner) */
+        .width-indicator-badge {
+            position: fixed;
+            top: 12px;
+            left: 12px;
+            z-index: 1000;
+            background-color: #002855; /* ⚓ MCC Navy background */
+            color: #ffffff;
+            border: 2px solid #fdbb30; /* 🏆 MCC Gold accent border */
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-weight: bold;
+            font-size: 0.85rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+            pointer-events: none; /* 👆 Allows clicks to pass through to elements underneath */
+        }
+
+        .width-indicator-badge span {
+            color: #fdbb30; /* 🏆 Highlight exact width pixel number in gold */
+        }
+
+        /* 🏛️ MCC Header Banner */
+        .mcc-header {
+            background-color: #4b3190; /* 🏛️ Primary MCC Purple */
+            color: #ffffff;
+            padding: 30px 20px;
+            border-bottom: 5px solid #fdbb30; /* 🏆 Primary MCC Gold accent border */
+            text-align: center;
+        }
+
+        .mcc-badge {
+            background-color: #fdbb30; /* 🏆 Gold badge */
+            color: #002855; /* ⚓ Dark Navy text */
+            font-weight: bold;
+            font-size: 0.85rem;
+            padding: 4px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .mcc-header h1 {
+            margin: 5px 0 10px 0;
+            font-size: 1.8rem;
+            color: #ffffff;
+        }
+
+        .mcc-header p {
+            margin: 0 auto;
+            max-width: 700px;
+            font-size: 1rem;
+            color: #f0eaf8;
+        }
+
+        /* 📦 Page Container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* =============================================================
+           👀 BREAKPOINT VISIBILITY CLASSES (DEFAULT: MOBILE VIEW < 600px)
+           -------------------------------------------------------------
+           By default (Mobile-First):
+           - .show-mobile is VISIBLE (display: block)
+           - .show-tablet is HIDDEN  (display: none)
+           - .show-desktop is HIDDEN (display: none)
+           ============================================================= */
+
+        .show-mobile {
+            display: block; /* 📱 Visible on mobile */
+        }
+
+        .show-tablet {
+            display: none; /* 📲 Hidden on mobile */
+        }
+
+        .show-desktop {
+            display: none; /* 💻 Hidden on mobile */
+        }
+
+        /* 🎯 Breakpoint Indicator Card Base Styling */
+        .breakpoint-card {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-left: 6px solid #4b3190; /* MCC Purple accent border */
+        }
+
+        .card-badge {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+        }
+
+        .mobile-badge {
+            background-color: #4b3190; /* MCC Purple */
+            color: #ffffff;
+        }
+
+        .tablet-badge {
+            background-color: #0277bd; /* Tablet Blue */
+            color: #ffffff;
+        }
+
+        .desktop-badge {
+            background-color: #fdbb30; /* MCC Gold */
+            color: #002855; /* MCC Navy */
+        }
+
+        .breakpoint-card h2 {
+            margin-top: 0;
+            color: #002855;
+        }
+
+        .breakpoint-card ul {
+            background: #f8f9fa;
+            padding: 15px 15px 15px 35px;
+            border-radius: 6px;
+            border: 1px solid #e9ecef;
+        }
+
+        /* 🖼️ Responsive Gallery Styling */
+        .gallery-section {
+            margin-bottom: 40px;
+        }
+
+        .gallery-section h2 {
+            color: #002855;
+            margin-bottom: 5px;
+        }
+
+        .gallery-section .subtitle {
+            margin-top: 0;
+            color: #555555;
+            margin-bottom: 20px;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: 1fr; /* 📱 Mobile default: 1 single column stack */
+            gap: 20px;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card .content {
+            padding: 15px;
+        }
+
+        .card h3 {
+            margin: 0 0 8px 0;
+            color: #4b3190;
+            font-size: 1.1rem;
+        }
+
+        .card p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #444444;
+        }
+
+        /* 💡 Explanation Section Styling */
+        .explanation-section {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .explanation-section h2 {
+            color: #4b3190;
+            border-bottom: 3px solid #fdbb30;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .explanation-section h3 {
+            color: #002855;
+            margin-top: 25px;
+        }
+
+        /* 💻 Code snippets inside explanation */
+        .code-block {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 15px 20px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* 🎓 MCC Footer */
+        .mcc-footer {
+            background-color: #002855; /* ⚓ MCC Navy */
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .mcc-footer a {
+            color: #fdbb30; /* 🏆 Gold link */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .mcc-footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* =============================================================
+           📲 2. TABLET MEDIA QUERY (600px BREAKPOINT)
+           -------------------------------------------------------------
+           Triggers when screen width is AT LEAST 600px (600px to 899px)
+           ============================================================= */
+
+        @media (min-width: 600px) {
+
+            /* 🎨 Background Color Change: Light Sky Blue for Tablet view */
+            body {
+                background-color: #e3f2fd;
+            }
+
+            /* 👀 Visibility Toggle for Tablet:
+               - Hide Mobile text (.show-mobile)
+               - SHOW Tablet text (.show-tablet)
+               - Hide Desktop text (.show-desktop) */
+            .show-mobile {
+                display: none;
+            }
+
+            .show-tablet {
+                display: block;
+            }
+
+            .show-desktop {
+                display: none;
+            }
+
+            /* 📐 Grid Layout: Change from 1 column to 2 columns */
+            .card-container {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .mcc-header h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        /* =============================================================
+           💻 3. DESKTOP MEDIA QUERY (900px BREAKPOINT)
+           -------------------------------------------------------------
+           Triggers when screen width is AT LEAST 900px (900px+)
+           ============================================================= */
+
+        @media (min-width: 900px) {
+
+            /* 🎨 Background Color Change: Light MCC Gold tint for Desktop view */
+            body {
+                background-color: #fff8e1;
+            }
+
+            /* 👀 Visibility Toggle for Desktop:
+               - Hide Mobile text (.show-mobile)
+               - Hide Tablet text (.show-tablet)
+               - SHOW Desktop text (.show-desktop) */
+            .show-mobile {
+                display: none;
+            }
+
+            .show-tablet {
+                display: none;
+            }
+
+            .show-desktop {
+                display: block;
+            }
+
+            /* 📐 Grid Layout: Change from 2 columns to 4 columns */
+            .card-container {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .mcc-header h1 {
+                font-size: 2.5rem;
+            }
+        }
+   

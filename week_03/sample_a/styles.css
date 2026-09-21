@@ -1,0 +1,66 @@
+/* ==========================================
+   BASE STYLES — Element Selectors
+   Target HTML tag names directly;
+   no class or id needed.
+   ========================================== */
+
+/* Element selector: applies to every <body> tag on the page */
+body {
+    font-family: 'Segoe UI', 'Open Sans', Arial, sans-serif;
+    background-color: #002855; /* ⚓ MCC Navy background */
+    color: #f4f0fa;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/* Grouped selector: comma separates targets — all three headings share these rules */
+h1,
+h2,
+h3 {
+    color: #fdbb30; /* 🏆 MCC Gold */
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   CLASS SELECTORS
+   Start with a dot (.) and can be applied
+   to multiple elements on the page.
+   ========================================== */
+
+/* Targets any element with class="img-center" */
+.img-center {
+    width: 40%;
+    height: auto;
+    /* auto keeps the image's natural proportions when width is set */
+    display: block;
+    /* block allows margin: auto to center the image horizontally */
+    margin: 20px auto;
+}
+
+/* Targets any element with class="highlighter" — applied to a <span> mid-paragraph */
+.highlighter {
+    background-color: greenyellow;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+}
+
+
+/* ==========================================
+   ID SELECTOR
+   Starts with a hash (#) and must be
+   unique — only one element per page.
+   ========================================== */
+
+/* Targets the single element with id="red" */
+#red {
+    color: #ff6b6b;
+}
+
+a {
+    color: #fdbb30; /* 🏆 MCC Gold */
+    font-weight: bold;
+}

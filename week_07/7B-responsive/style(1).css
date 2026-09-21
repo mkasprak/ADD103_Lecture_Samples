@@ -1,0 +1,206 @@
+
+        /* =============================================================
+           🏛️ McHenry County College (MCC) Brand Theme & Stylesheet
+           ADD 103 — Web Development Sample 07B: Responsive Layout
+           -------------------------------------------------------------
+           🎨 MCC Brand Palette:
+           - MCC Purple: #4b3190
+           - MCC Gold:   #fdbb30
+           - MCC Navy:   #002855
+           - Fonts:      'Segoe UI', 'Open Sans', Arial, sans-serif
+           ============================================================= */
+
+        /* 📱 1. BASE / MOBILE-FIRST STYLES (Applies to all screen sizes & mobile phones < 600px) */
+
+        body {
+            font-family: 'Segoe UI', 'Open Sans', Arial, sans-serif;
+            background-color: #f4f0fa; /* 📱 Mobile default background: Light MCC Purple tint */
+            color: #222222;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            transition: background-color 0.4s ease;
+        }
+
+        /* 🏛️ MCC Header Banner */
+        .mcc-header {
+            background-color: #4b3190; /* 🏛️ Primary MCC Purple */
+            color: #ffffff;
+            padding: 30px 20px;
+            border-bottom: 5px solid #fdbb30; /* 🏆 Primary MCC Gold accent border */
+            text-align: center;
+        }
+
+        .mcc-badge {
+            background-color: #fdbb30; /* 🏆 Gold badge */
+            color: #002855; /* ⚓ Dark Navy text */
+            font-weight: bold;
+            font-size: 0.85rem;
+            padding: 4px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .page-title {
+            margin: 5px 0 10px 0;
+            font-size: 1.8rem;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .page-subtitle {
+            margin: 0 auto;
+            max-width: 700px;
+            font-size: 1rem;
+            color: #f0eaf8;
+            text-align: center;
+        }
+
+        /* 📦 Container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* 📱 1. MOBILE DEFAULT (1 COLUMN LAYOUT) */
+        .card-container {
+            display: grid; /* ⚙️ Activates CSS Grid layout */
+            grid-template-columns: 1fr; /* 📐 Single column stack */
+            gap: 20px;
+        }
+
+        /* 🃏 Card Component Styling */
+        .card {
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden; /* ✂️ Clips images neatly */
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        .card img {
+            width: 100%; /* 🖼️ Fluid Image */
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card .content {
+            padding: 15px;
+        }
+
+        .card h2 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #4b3190; /* 🏛️ MCC Purple */
+        }
+
+        .card p {
+            margin: 0;
+            color: #444444;
+            font-size: 0.95rem;
+        }
+
+        /* 💡 Student Explanation Guide Box */
+        .explanation-section {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 30px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .explanation-section h2 {
+            color: #4b3190;
+            border-bottom: 3px solid #fdbb30;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .explanation-section h3 {
+            color: #002855;
+            margin-top: 25px;
+        }
+
+        /* 💻 Code snippets inside explanation */
+        .code-block {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 15px 20px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .code-block-highlight {
+            background: #1e1e1e;
+            color: #a6e22e;
+            padding: 12px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+
+        /* 🎓 MCC Footer */
+        .mcc-footer {
+            background-color: #002855; /* ⚓ MCC Navy */
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .mcc-footer a {
+            color: #fdbb30; /* 🏆 Gold link */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .mcc-footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* =============================================================
+           📲 2. TABLET MEDIA QUERY (600px BREAKPOINT)
+           -------------------------------------------------------------
+           - Triggers when screen viewport is AT LEAST 600px wide
+           - Overrides the 1-column mobile layout into a 2-column grid
+           ============================================================= */
+        @media (min-width: 600px) {
+            .card-container {
+                grid-template-columns: 1fr 1fr; /* 📐 Splits cards into 2 equal columns */
+            }
+
+            body {
+                background-color: #e3f2fd; /* 🎨 Visual hint: Light blue background on tablets */
+            }
+        }
+
+        /* =============================================================
+           💻 3. DESKTOP MEDIA QUERY (900px BREAKPOINT)
+           -------------------------------------------------------------
+           - Triggers when screen viewport is AT LEAST 900px wide
+           - Overrides tablet layout into a 4-column row
+           ============================================================= */
+        @media (min-width: 900px) {
+            .card-container {
+                grid-template-columns: repeat(4, 1fr); /* 📐 Expands cards into 4 equal columns */
+            }
+
+            body {
+                background-color: #fff8e1; /* 🎨 Visual hint: Light MCC Gold tint on desktops */
+            }
+        }
+   

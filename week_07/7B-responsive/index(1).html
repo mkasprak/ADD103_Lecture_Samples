@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 📱 MANDATORY FOR RESPONSIVE: Viewport meta tag tells mobile browsers not to zoom out or pretend to be a desktop display -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCC ADD 103 | Sample 07B: Responsive Grid Layout</title>
+    <!-- 🎨 MCC Fonts & External Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 🎓 MCC BRAND HEADER -->
+    <header class="mcc-header">
+        <span class="mcc-badge">McHenry County College — ADD 103</span>
+        <h1 class="page-title">📱 Responsive Grid Layout</h1>
+        <p class="page-subtitle">Resize your browser window to see cards adapt from 1 column on mobile to 2 columns on tablet and 4 columns on desktop!</p>
+    </header>
+
+    <main class="container">
+
+        <!-- 📱 MOBILE-FIRST GRID: This container starts as a single column stack on mobile screens, then expands at 600px and 900px -->
+        <div class="card-container">
+
+            <!-- 📱 Item 1: Displays in 1 column on mobile, 2 columns on tablet, 4 columns on desktop -->
+            <div class="card">
+                <img src="https://placehold.co/400x200/4b3190/ffffff?text=1.+Mobile+Stack" alt="Mobile Stack">
+                <div class="content">
+                    <h2>Mobile First</h2>
+                    <p>This layout starts as a single column stack on mobile devices.</p>
+                </div>
+            </div>
+
+            <!-- 📲 Item 2: Moves next to Item 1 at the 600px tablet breakpoint -->
+            <div class="card">
+                <img src="https://placehold.co/400x200/002855/ffffff?text=2.+Tablet+Grid" alt="Tablet Grid">
+                <div class="content">
+                    <h2>Tablet View</h2>
+                    <p>At 600px, it splits into a 2-column layout.</p>
+                </div>
+            </div>
+
+            <!-- 💻 Item 3: Expands into a 4-column row at the 900px desktop breakpoint -->
+            <div class="card">
+                <img src="https://placehold.co/400x200/fdbb30/000000?text=3.+Desktop+Row" alt="Desktop Row">
+                <div class="content">
+                    <h2>Desktop View</h2>
+                    <p>At 900px, it expands to a 4-column row.</p>
+                </div>
+            </div>
+
+            <!-- 💧 Item 4: Fluid design lets all cards resize seamlessly with fraction units (1fr) -->
+            <div class="card">
+                <img src="https://placehold.co/400x200/2e7d32/ffffff?text=4.+Fluid+Grid" alt="Fluid Grid">
+                <div class="content">
+                    <h2>Fluid Design</h2>
+                    <p>Fraction units (1fr) adapt smoothly to available screen width.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ================================================
+             📚 STUDENT GUIDE: Media Queries & Responsive Design Explained
+             ================================================ -->
+        <section class="explanation-section">
+            <h2>
+                💡 What Are Media Queries &amp; How Do They Work?
+            </h2>
+
+            <h3>1. The Simple Analogy</h3>
+            <p>
+                Imagine dressing for the weather. If it's hot outside, you wear a t-shirt. If it starts raining, you put on a raincoat. 
+                <strong>Media queries</strong> work the same way for websites! They ask the browser: <em>"How wide is this screen right now?"</em> 
+                Based on the answer, the browser applies different CSS styling rules.
+            </p>
+
+            <h3>2. Why "Mobile-First"?</h3>
+            <p>
+                In modern web development, we usually write CSS <strong>mobile-first</strong>:
+            </p>
+            <ul>
+                <li><strong>Base CSS (Default):</strong> Write styles for mobile screens first (e.g., a simple 1-column layout).</li>
+                <li><strong>Media Queries:</strong> As the screen gets wider (tablets, laptops, desktops), media queries kick in to expand the layout into 2 or 4 columns.</li>
+            </ul>
+
+            <h3>3. Anatomy of a Media Query</h3>
+            <p>Here is what the code looks like in your CSS file:</p>
+            <pre class="code-block"><code>/* 1. Base styles (apply to mobile phones by default) */
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 Column */
+}
+
+/* 2. Tablet view: triggers at 600px width or wider */
+@media (min-width: 600px) {
+    .card-container {
+        grid-template-columns: 1fr 1fr; /* 2 Columns */
+    }
+}
+
+/* 3. Desktop view: triggers at 900px width or wider */
+@media (min-width: 900px) {
+    .card-container {
+        grid-template-columns: repeat(4, 1fr); /* 4 Columns */
+    }
+}</code></pre>
+
+            <h3>4. The Secret Ingredient: Viewport Meta Tag</h3>
+            <p>
+                Media queries won't work on mobile devices without this required line inside your HTML <code>&lt;head&gt;</code>:
+            </p>
+            <pre class="code-block-highlight"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+            <p>
+                Without it, phone browsers pretend to be desktop screens and zoom out, making your site tiny and unreadable!
+            </p>
+
+            <h3>5. How to Test It Yourself</h3>
+            <ul>
+                <li><strong>Resize your window:</strong> Click and drag the corner of your browser window to make it wider or narrower. Notice how the background color changes from grey (mobile) to blue (tablet) to green (desktop)!</li>
+                <li><strong>Use Developer Tools:</strong> Press <kbd>F12</kbd> or right-click &rarr; <em>Inspect</em>, then click the <strong>Device Toolbar icon</strong> (📱) to test specific phone models.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- 🎓 MCC FOOTER -->
+    <footer class="mcc-footer">
+        <p>Created by Dr. Meri Kasprak in AntiGravity with collaboration from GitHub Copilot (Gemini 3.6 Flash).</p>
+        <p>McHenry County College • ADD 103 Web Development</p>
+        <p><a href="../../index.html">🏚️ Course Home Page</a></p>
+    </footer>
+
+</body>
+
+</html>
+
+</html>
